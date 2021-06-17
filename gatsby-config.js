@@ -16,8 +16,8 @@
 
 module.exports = {
   siteMetadata: {
-    title: `Duong Ha Nhi`,
-    description: `Duong Ha Nhi's Curriculum Vitae`,
+    title: `Dương Hà Nhi`,
+    description: `Dương Hà Nhi's Curriculum Vitae`,
     author: `@miketvo`,
   },
   plugins: [
