@@ -25,9 +25,7 @@ const Header = ({ siteTitle }) => (
       <Link to="/en">English</Link>
     </div>
     <div>
-      <h1>
-        <Link to="/">{siteTitle}</Link>
-      </h1>
+      <h1>{siteTitle}</h1>
     </div>
   </header>
 );
