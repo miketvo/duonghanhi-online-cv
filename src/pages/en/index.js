@@ -10,23 +10,18 @@
  * COPYING AND/OR DISTRIBUTING OF ANY CONTENT WITHIN THIS PROJECT WITHOUT EX-
  * PRESS PERMISSION FROM THE CLIENT AND/OR THE AUTHOR, VIA ANY MEDIUM IS
  * STRICTLY PROHIBITED.
- *
- * Written by Mike Vo on June 17th 2021.
  */
 
 import * as React from "react";
-import { Link } from "gatsby";
 
-import Layout from "../components/layout";
-import Seo from "../components/seo";
+import Seo from "../../components/seo";
+import Layout from "../../components/layout";
 
-const SecondPage = () => (
+const IndexPageEN = () => (
   <Layout>
-    <Seo title="Page two" />
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
+    <Seo />
+    <p>Hello World!</p>
   </Layout>
 );
 
-export default SecondPage;
+export default IndexPageEN;
