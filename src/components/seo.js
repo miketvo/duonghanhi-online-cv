@@ -92,6 +92,7 @@ Seo.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
+  title: `Dương Hà Nhi`,
 };
 
 Seo.propTypes = {

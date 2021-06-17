@@ -10,34 +10,18 @@
  * COPYING AND/OR DISTRIBUTING OF ANY CONTENT WITHIN THIS PROJECT WITHOUT EX-
  * PRESS PERMISSION FROM THE CLIENT AND/OR THE AUTHOR, VIA ANY MEDIUM IS
  * STRICTLY PROHIBITED.
- *
- * Written by Mike Vo on June 17th 2021.
  */
 
 import * as React from "react";
-import PropTypes from "prop-types";
-import { Link } from "gatsby";
 
-const Header = ({ siteTitle }) => (
-  <header>
-    <div>
-      <Link to="/">Tiếng Việt</Link>
-      <Link to="/en">English</Link>
-    </div>
-    <div>
-      <h1>
-        <Link to="/">{siteTitle}</Link>
-      </h1>
-    </div>
-  </header>
+import Layout from "../../components/layout";
+import Seo from "../../components/seo";
+
+const IndexPage = () => (
+  <Layout>
+    <Seo />
+    <p>Xin chào!</p>
+  </Layout>
 );
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-};
-
-Header.defaultProps = {
-  siteTitle: ``,
-};
-
-export default Header;
+export default IndexPage;

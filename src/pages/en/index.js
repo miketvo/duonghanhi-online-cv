@@ -10,22 +10,18 @@
  * COPYING AND/OR DISTRIBUTING OF ANY CONTENT WITHIN THIS PROJECT WITHOUT EX-
  * PRESS PERMISSION FROM THE CLIENT AND/OR THE AUTHOR, VIA ANY MEDIUM IS
  * STRICTLY PROHIBITED.
- *
- * Written by Mike Vo on June 17th 2021.
  */
 
 import * as React from "react";
-import { Link } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
 
-import Layout from "../components/layout";
-import Seo from "../components/seo";
+import Seo from "../../components/seo";
+import Layout from "../../components/layout";
 
-const IndexPage = () => (
+const IndexPageEN = () => (
   <Layout>
     <Seo />
     <p>Hello World!</p>
   </Layout>
 );
 
-export default IndexPage;
+export default IndexPageEN;
