@@ -10,8 +10,6 @@
  * COPYING AND/OR DISTRIBUTING OF ANY CONTENT WITHIN THIS PROJECT WITHOUT EX-
  * PRESS PERMISSION FROM THE CLIENT AND/OR THE AUTHOR, VIA ANY MEDIUM IS
  * STRICTLY PROHIBITED.
- *
- * Written by Mike Vo on June 17th 2021.
  */
 
 /**
@@ -32,20 +30,40 @@ import "../styles/global.module.css";
 import "../fonts/fonts.css";
 import "./layout.module.css";
 
-const Layout = ({ children }) => {
+const Layout = ({ lang, children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
-          title
+          vietnameseHeader {
+            name
+            description
+          }
+          englishHeader {
+            name
+            description
+          }
         }
       }
     }
   `);
 
+  let headerName = "Title";
+  let headerDesc = "Description";
+  switch (lang) {
+    case "vi":
+      headerName = data.site.siteMetadata.vietnameseHeader.name;
+      headerDesc = data.site.siteMetadata.vietnameseHeader.description;
+      break;
+    case "en":
+      headerName = data.site.siteMetadata.englishHeader.name;
+      headerDesc = data.site.siteMetadata.englishHeader.description;
+      break;
+  }
+
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Header lang={lang} name={headerName} description={headerDesc} />
       <main>{children}</main>
       <footer>
         COPYRIGHT DƯƠNG HÀ NHI ©{new Date().getFullYear()} | WEBSITE BY

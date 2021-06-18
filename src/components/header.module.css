@@ -25,3 +25,25 @@
   align-items: center;
   height: 100vh;
 }
+
+.titleWrapper {
+  margin: 30vh 0;
+}
+
+.title,
+.subtitle {
+  padding: 0 50px;
+  color: var(--secondary-pink);
+  font-family: var(--header-font);
+  text-align: -moz-center;
+  text-align: -webkit-center;
+  text-align: center;
+}
+
+.title {
+  font-size: 4rem;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+}

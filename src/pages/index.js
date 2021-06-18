@@ -18,7 +18,7 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 
 const IndexPageVI = () => (
-  <Layout>
+  <Layout lang={"vi"}>
     <Seo lang={"vi"} />
     <p>Xin chào!</p>
   </Layout>

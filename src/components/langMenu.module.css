@@ -12,10 +12,16 @@
  * STRICTLY PROHIBITED.
  */
 
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/node-apis/
- */
+.lang-menu .link {
+  padding: 20px;
+  color: var(--white);
+  font-family: var(--secondary-font);
+  font-size: 1rem;
+  opacity: 0.4;
+  text-decoration: none;
+}
 
-// You can delete this file if you're not using it
+.active {
+  text-decoration: underline !important;
+  opacity: 1.0 !important;
+}
