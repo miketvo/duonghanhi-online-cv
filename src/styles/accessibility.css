@@ -12,15 +12,3 @@
  * STRICTLY PROHIBITED.
  */
 
-header {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  align-items: center;
-  height: 100vh;
-}

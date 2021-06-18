@@ -26,7 +26,10 @@ import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 
 import Header from "./header";
-import "./layout.css";
+import "../styles/reset.css";
+import "../styles/accessibility.css";
+import "../styles/global.module.css";
+import "./layout.module.css";
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`

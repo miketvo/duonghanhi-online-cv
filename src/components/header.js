@@ -18,10 +18,10 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
 
-import style from "./header.css";
+import * as style from "./header.module.css";
 
 const Header = ({ siteTitle }) => (
-  <header>
+  <header className={style.header}>
     <div>
       <Link to="/">Tiếng Việt</Link>
       <Link to="/en">English</Link>
