@@ -19,7 +19,7 @@ import Seo from "../components/seo";
 
 const IndexPageVI = () => (
   <Layout>
-    <Seo />
+    <Seo lang={"vi"} />
     <p>Xin chào!</p>
   </Layout>
 );

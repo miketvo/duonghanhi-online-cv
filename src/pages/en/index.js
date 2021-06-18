@@ -19,7 +19,7 @@ import Layout from "../../components/layout";
 
 const IndexPageEN = () => (
   <Layout>
-    <Seo />
+    <Seo lang={"en"} />
     <p>Hello World!</p>
   </Layout>
 );
