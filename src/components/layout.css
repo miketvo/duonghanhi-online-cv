@@ -22,10 +22,14 @@ html {
   overflow-y: scroll;
 }
 body {
+  background-image: url("../images/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: hsla(0, 0%, 0%, 0.8);
+  color: rgba(255, 255, 255, 1.0);
   font-family: georgia, serif;
   font-weight: normal;
   word-wrap: break-word;
@@ -67,12 +71,14 @@ template {
   display: none;
 }
 a {
+  color: #d9a9ac;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
 a:active,
 a:hover {
   outline-width: 0;
+  text-decoration: none;
 }
 abbr[title] {
   border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
