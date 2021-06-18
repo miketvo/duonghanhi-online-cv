@@ -37,6 +37,7 @@
     "start": "npm run develop",
     "start-network-preview": "npm run develop-network-preview",
     "serve": "gatsby serve",
+    "serve-network-preview": "gatsby serve -H 0.0.0.0",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   }
