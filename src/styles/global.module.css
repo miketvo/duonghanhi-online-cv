@@ -1,0 +1,39 @@
+/*
+ * Copyright (c) 2021 Mike Vo (info@miketvo.com) - All Rights Reserved.
+ *
+ * This file is part of the project "duonghanhi-online-cv".
+ *
+ * This project is an online curriculum vitae authored by Mike Vo - hereby
+ * referred to as "the author" - for Ms. Duong Ha Nhi - hereby referred to as
+ * "the client".
+ *
+ * COPYING AND/OR DISTRIBUTING OF ANY CONTENT WITHIN THIS PROJECT WITHOUT EX-
+ * PRESS PERMISSION FROM THE CLIENT AND/OR THE AUTHOR, VIA ANY MEDIUM IS
+ * STRICTLY PROHIBITED.
+ */
+
+:root {
+  /* Fonts */
+  --primary-font: "JustSaying", serif;
+  --secondary-font: "RustHandmadeExt", serif;
+  --header-font: "RustSansBlack", sans-serif;
+  --nav-font: "Doodly", sans-serif;
+
+  /* Colors */
+  --black: #000;
+  --white: #fffeff;
+  --light-grey: #cdcfcf;
+  --dark-grey: #5e5f5f;
+  --primary-green: #234b4a;
+  --secondary-pink: #d9a9ac;
+  --complementary-yellow: #fff697;
+  --complementary-blue: #9cdbe7;
+  --complementary-green: #b2d897;
+
+  /* Sizes and widths */
+  --content-w-ultra-wide: 2560px;
+  --content-w-wide: 1920px;
+  --content-w-regular: 1280px;
+  --content-w-narrow: 767px;
+  --content-w-min: 320px;
+}

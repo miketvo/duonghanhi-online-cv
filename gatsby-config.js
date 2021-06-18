@@ -10,8 +10,6 @@
  * COPYING AND/OR DISTRIBUTING OF ANY CONTENT WITHIN THIS PROJECT WITHOUT EX-
  * PRESS PERMISSION FROM THE CLIENT AND/OR THE AUTHOR, VIA ANY MEDIUM IS
  * STRICTLY PROHIBITED.
- *
- * Written by Mike Vo on June 17th 2021.
  */
 
 module.exports = {
@@ -19,8 +17,61 @@ module.exports = {
     title: `Dương Hà Nhi`,
     description: `Dương Hà Nhi's Curriculum Vitae`,
     author: `@miketvo`,
+    vietnameseHeader: {
+      name: `Dương Hà Nhi`,
+      description: `Giáo viên Hóa học`,
+      navLinks: [
+        {
+          name: `Tiểu sử`,
+          link: `#bio`,
+        },
+        {
+          name: `Học vấn`,
+          link: `#education`,
+        },
+        {
+          name: `Kinh nghiệm`,
+          link: `#experiences`,
+        },
+        {
+          name: `Kỹ năng`,
+          link: `#skills`,
+        },
+        {
+          name: `Liên hệ`,
+          link: `#contact`,
+        },
+      ],
+    },
+    englishHeader: {
+      name: `Dương Hà Nhi`,
+      description: `Chemistry Teacher`,
+      navLinks: [
+        {
+          name: `Bio`,
+          link: `#bio`,
+        },
+        {
+          name: `Education`,
+          link: `#education`,
+        },
+        {
+          name: `Experiences`,
+          link: `#experiences`,
+        },
+        {
+          name: `Skills`,
+          link: `#skills`,
+        },
+        {
+          name: `Contact`,
+          link: `#contact`,
+        },
+      ],
+    },
   },
   plugins: [
+    `gatsby-plugin-postcss`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {

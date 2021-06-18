@@ -14,13 +14,14 @@
 
 import * as React from "react";
 
+import Layout from "../components/layout";
 import Seo from "../components/seo";
 
-const IndexPage = () => (
-  <>
-    <Seo />
-    <p>Loading...</p>
-  </>
+const IndexPageVI = () => (
+  <Layout lang={"vi"}>
+    <Seo lang={"vi"} />
+    <p>Xin chào!</p>
+  </Layout>
 );
 
-export default IndexPage;
+export default IndexPageVI;

@@ -10,8 +10,6 @@
  * COPYING AND/OR DISTRIBUTING OF ANY CONTENT WITHIN THIS PROJECT WITHOUT EX-
  * PRESS PERMISSION FROM THE CLIENT AND/OR THE AUTHOR, VIA ANY MEDIUM IS
  * STRICTLY PROHIBITED.
- *
- * Written by Mike Vo on June 17th 2021.
  */
 
 /**
@@ -20,13 +18,4 @@
  * See: https://www.gatsbyjs.com/docs/node-apis/
  */
 
-exports.createPages = ({ actions }) => {
-  const { createRedirect } = actions;
-
-  createRedirect({
-    fromPath: `/`,
-    toPath: `/vi`,
-    redirectInBrowser: true,
-    isPermanent: true,
-  });
-};
+// You can delete this file if you're not using it

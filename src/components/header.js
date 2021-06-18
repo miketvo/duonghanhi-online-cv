@@ -10,25 +10,23 @@
  * COPYING AND/OR DISTRIBUTING OF ANY CONTENT WITHIN THIS PROJECT WITHOUT EX-
  * PRESS PERMISSION FROM THE CLIENT AND/OR THE AUTHOR, VIA ANY MEDIUM IS
  * STRICTLY PROHIBITED.
- *
- * Written by Mike Vo on June 17th 2021.
  */
 
 import * as React from "react";
 import PropTypes from "prop-types";
-import { Link } from "gatsby";
 
-const Header = ({ siteTitle }) => (
-  <header>
-    <div>
-      <Link to="/">Tiếng Việt</Link>
-      <Link to="/en">English</Link>
+import LangMenu from "./langMenu";
+import StickyNav from "./stickyNav";
+import * as styles from "./header.module.css";
+
+const Header = ({ name, description, navLinks, lang }) => (
+  <header className={styles.header}>
+    <LangMenu lang={lang} />
+    <div className={styles.titleWrapper}>
+      <h1 className={styles.title}>{name}</h1>
+      <p className={styles.subtitle}>{description}</p>
     </div>
-    <div>
-      <h1>
-        <Link to="/">{siteTitle}</Link>
-      </h1>
-    </div>
+    <StickyNav navLinks={navLinks} />
   </header>
 );
 
