@@ -29,6 +29,7 @@ import Header from "./header";
 import "../styles/reset.css";
 import "../styles/accessibility.css";
 import "../styles/global.module.css";
+import "../fonts/fonts.css";
 import "./layout.module.css";
 
 const Layout = ({ children }) => {
