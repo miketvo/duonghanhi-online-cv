@@ -20,10 +20,54 @@ module.exports = {
     vietnameseHeader: {
       name: `Dương Hà Nhi`,
       description: `Giáo viên Hóa học`,
+      navLinks: [
+        {
+          name: `Tiểu sử`,
+          link: `#bio`,
+        },
+        {
+          name: `Học vấn`,
+          link: `#education`,
+        },
+        {
+          name: `Kinh nghiệm`,
+          link: `#experiences`,
+        },
+        {
+          name: `Kỹ năng`,
+          link: `#skills`,
+        },
+        {
+          name: `Liên hệ`,
+          link: `#contact`,
+        },
+      ],
     },
     englishHeader: {
       name: `Dương Hà Nhi`,
       description: `Chemistry Teacher`,
+      navLinks: [
+        {
+          name: `Bio`,
+          link: `#bio`,
+        },
+        {
+          name: `Education`,
+          link: `#education`,
+        },
+        {
+          name: `Experiences`,
+          link: `#experiences`,
+        },
+        {
+          name: `Skills`,
+          link: `#skills`,
+        },
+        {
+          name: `Contact`,
+          link: `#contact`,
+        },
+      ],
     },
   },
   plugins: [

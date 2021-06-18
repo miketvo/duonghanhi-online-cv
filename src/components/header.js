@@ -16,15 +16,17 @@ import * as React from "react";
 import PropTypes from "prop-types";
 
 import LangMenu from "./langMenu";
+import StickyNav from "./stickyNav";
 import * as styles from "./header.module.css";
 
-const Header = ({ name, description, lang }) => (
+const Header = ({ name, description, navLinks, lang }) => (
   <header className={styles.header}>
     <LangMenu lang={lang} />
     <div className={styles.titleWrapper}>
       <h1 className={styles.title}>{name}</h1>
       <p className={styles.subtitle}>{description}</p>
     </div>
+    <StickyNav navLinks={navLinks} />
   </header>
 );
 

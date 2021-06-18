@@ -38,10 +38,18 @@ const Layout = ({ lang, children }) => {
           vietnameseHeader {
             name
             description
+            navLinks {
+              name
+              link
+            }
           }
           englishHeader {
             name
             description
+            navLinks {
+              name
+              link
+            }
           }
         }
       }
@@ -50,20 +58,28 @@ const Layout = ({ lang, children }) => {
 
   let headerName = "Title";
   let headerDesc = "Description";
+  let navLinks = undefined;
   switch (lang) {
     case "vi":
       headerName = data.site.siteMetadata.vietnameseHeader.name;
       headerDesc = data.site.siteMetadata.vietnameseHeader.description;
+      navLinks = data.site.siteMetadata.vietnameseHeader.navLinks;
       break;
     case "en":
       headerName = data.site.siteMetadata.englishHeader.name;
       headerDesc = data.site.siteMetadata.englishHeader.description;
+      navLinks = data.site.siteMetadata.englishHeader.navLinks;
       break;
   }
 
   return (
     <>
-      <Header lang={lang} name={headerName} description={headerDesc} />
+      <Header
+        lang={lang}
+        name={headerName}
+        description={headerDesc}
+        navLinks={navLinks}
+      />
       <main>{children}</main>
       <footer>
         COPYRIGHT DƯƠNG HÀ NHI ©{new Date().getFullYear()} | WEBSITE BY

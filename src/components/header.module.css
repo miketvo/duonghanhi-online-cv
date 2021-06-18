@@ -27,7 +27,7 @@
 }
 
 .titleWrapper {
-  margin: 30vh 0;
+  margin: 25vh 0;
 }
 
 .title,
@@ -42,8 +42,10 @@
 
 .title {
   font-size: 4rem;
+  padding-top: 0;
 }
 
 .subtitle {
   font-size: 1.3rem;
+  padding-bottom: 0;
 }
