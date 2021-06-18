@@ -58,7 +58,7 @@ const Layout = ({ lang, children }) => {
 
   let headerName = "Title";
   let headerDesc = "Description";
-  let navLinks = undefined;
+  let navLinks = [];
   switch (lang) {
     case "vi":
       headerName = data.site.siteMetadata.vietnameseHeader.name;
