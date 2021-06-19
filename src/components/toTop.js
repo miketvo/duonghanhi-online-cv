@@ -27,7 +27,6 @@
  */
 
 import * as React from "react";
-import { StaticImage } from "gatsby-plugin-image";
 import scrollTo from "gatsby-plugin-smoothscroll";
 
 import * as styles from "./toTop.module.css";
@@ -41,7 +40,7 @@ const ToTop = () => (
         scrollTo("#top");
       }}
     >
-      <StaticImage src={"../images/to_top_arrow.png"} alt={""} />
+      <img className={styles.icon} src="/to_top_arrow.svg" alt="" />
     </button>
   </>
 );
