@@ -73,10 +73,12 @@ function Seo({ description, lang, meta, title }) {
       <script
         src={withPrefix("js/stickyNavClientLogic.js")}
         type={"text/javascript"}
+        defer
       />
       <script
         src={withPrefix("js/auxiliaryNavClientLogic.js")}
         type={"text/javascript"}
+        defer
       />
     </Helmet>
   );

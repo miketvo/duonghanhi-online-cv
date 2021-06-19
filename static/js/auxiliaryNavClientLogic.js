@@ -12,11 +12,13 @@
  * STRICTLY PROHIBITED.
  */
 
-const stickyNavOffsetTop = document.getElementById("sticky-nav").offsetTop;
+const stickyNav = document.getElementById("sticky-nav");
 const toTopButton = document.getElementById("to-top-button");
 const langSwitchButton = document.getElementById("lang-switch-button");
 
-if (toTopButton && langSwitchButton) {
+if (stickyNav && toTopButton && langSwitchButton) {
+  let stickyNavOffsetTop = stickyNav.offsetTop;
+
   toTopButton.addEventListener("mouseenter", function () {
     toTopButton.setAttribute(
       "style",
