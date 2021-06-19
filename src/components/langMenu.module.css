@@ -13,12 +13,17 @@
  */
 
 .lang-menu .link {
-  padding: 20px;
+  margin: 20px;
   color: var(--white);
   font-family: var(--secondary-font);
   font-size: 1rem;
   opacity: 0.4;
   text-decoration: none;
+  transition: 0.15s;
+}
+
+.lang-menu .link:hover {
+  opacity: 1.0;
 }
 
 .active {
