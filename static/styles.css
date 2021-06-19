@@ -14,19 +14,40 @@
 
 /* Desktop sticky navigation bar styles */
 .sticky-nav-stick {
-    position: fixed;
-    top: 0;
-    z-index: 99;
-    padding: 40px 0 30px 0;
-    background: var(--black);
-    transform-origin: top;
-    animation: fadeInExpandY 0.5s;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  padding: 40px 0 30px 0;
+  background: var(--black);
+  transform-origin: top;
+  animation: fadeInExpandY 0.5s;
 }
 
-.sticky-nav-stick-active {
-    opacity: 1.0;
+.sticky-nav-stick ul li {
+  position: relative;
 }
 
-.sticky-nav-stick-inactive {
-    opacity: 0.4;
+.sticky-nav-stick ul li a {
+  opacity: 0.4;
+  transition: opacity 0.3s;
+}
+
+.sticky-nav-stick ul li a:hover {
+  opacity: 1.0;
+}
+
+.sticky-nav-stick ul li .active {
+  opacity: 1.0;
+}
+
+.sticky-nav-stick ul li .active:after {
+  content: "";
+  position: absolute;
+  top: calc(2.2rem + 15px);
+  left: 0;
+  height: 0.05rem;
+  width: 100%;
+  background: var(--white);
+  opacity: initial;
+  transform: initial;
 }

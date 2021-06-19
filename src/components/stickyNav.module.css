@@ -58,7 +58,7 @@
 
 .sticky-nav li a:hover:after,
 .sticky-nav li a:focus:after {
-  opacity: 1;
+  opacity: inherit;
   transform: scaleX(1);
 }
 
