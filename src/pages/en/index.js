@@ -13,15 +13,184 @@
  */
 
 import * as React from "react";
+import Img from "gatsby-image";
+import { graphql, useStaticQuery } from "gatsby";
 
 import Seo from "../../components/seo";
 import Layout from "../../components/layout";
 
-const IndexPageEN = () => (
-  <Layout lang={"en"}>
-    <Seo lang={"en"} />
-    <p>Hello World!</p>
-  </Layout>
-);
+const IndexPageEN = () => {
+  const data = useStaticQuery(graphql`
+    query ImageQueryEN {
+      portraitImage: file(relativePath: { eq: "portrait.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 3461) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `);
+
+  return (
+    <Layout lang={"en"}>
+      <Seo lang={"en"} />
+
+      <section id={"bio"}>
+        <div>
+          <div>
+            <Img
+              fluid={data.portraitImage.childImageSharp.fluid}
+              alt={"Portrait photo"}
+            />
+          </div>
+          <div>
+            <p>Hello! My name is Dương Hà Nhi.</p>
+            <p>
+              I am an enthusiastic secondary and high school chemistry teacher
+              from Hanoi. My passion is working with young people and
+              contributing to their personal development. My goal is to enhance
+              the learning experience for my students and help them get the most
+              out of their school years by making lessons enjoyable, fun, and
+              practical.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id={"education"}>
+        <div>
+          <div>
+            <h2>2014</h2>
+          </div>
+          <div>
+            <h2>Trần Phú - Hoàn Kiếm Highschool</h2>
+          </div>
+
+          <div>
+            <h2>2017</h2>
+          </div>
+          <div>
+            <h2>Vietnam National University, Hanoi</h2>
+            <p>
+              University of Education
+              <br />
+              School of Chemistry Pedagogy
+            </p>
+          </div>
+
+          <div>
+            <h2>2017</h2>
+          </div>
+          <div>
+            <h2>Vietnam National University, Hanoi</h2>
+            <p>
+              University of Languages and International Studies
+              <br />
+              School of English, Language Interpretation and Translation Major
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id={"experiences"}>
+        <div>
+          <h3>2017 - 2021</h3>
+          <h2>Chemistry Tutor</h2>
+          <Img />
+          <p>
+            Tutoring students in Chemistry for their Vietnamese university
+            entrance exam.
+          </p>
+        </div>
+
+        <div>
+          <h3>2019</h3>
+          <h2>Hunarobo Contest 7</h2>
+          <Img />
+          <p>Assisting in organisational logistics and contestants support.</p>
+        </div>
+
+        <div>
+          <h3>2019 - 2020</h3>
+          <h2>Apax English</h2>
+          <Img />
+          <p>
+            English teaching assistant for native and non-native teaching
+            staffs, bilingual English-Vietnamese interpretation for parent
+            meetings.
+          </p>
+        </div>
+
+        <div>
+          <h3>2020</h3>
+          <h2>HES - VNU Highschool of Education Science</h2>
+          <Img />
+          <p>Practicing in Pedagogy.</p>
+        </div>
+
+        <div>
+          <h3>2021</h3>
+          <h2>Trần Phú - Hoàn Kiếm Highschool</h2>
+          <Img />
+          <p>Professional training in Pedagogy.</p>
+        </div>
+      </section>
+
+      <section id={"skills"}>
+        <div>
+          <h2>English</h2>
+          <div>
+            <span>IELTS 6.0</span>
+          </div>
+        </div>
+
+        <div>
+          <h2>Office Information Technology</h2>
+          <div></div>
+        </div>
+
+        <div>
+          <h2>Video Editing</h2>
+          <div></div>
+        </div>
+
+        <div>
+          <h2>Photo Design</h2>
+          <div></div>
+        </div>
+
+        <div>
+          <h2>Teamwork</h2>
+          <div></div>
+        </div>
+      </section>
+
+      <section id={"contact"}>
+        <div>
+          <div>
+            <div>Phone Icon here</div>
+            <p>0967931999</p>
+          </div>
+
+          <div>
+            <div>Email Icon here</div>
+            <p>nhidg25@gmail.com</p>
+          </div>
+
+          <div>
+            <div>Facebook Icon here</div>
+            <p>facebook.com/dg.hnhi</p>
+          </div>
+
+          <div>
+            <div>Map Icon here</div>
+            <p>371 Vĩnh Hưng st., Hoàng Mai District - Hanoi</p>
+          </div>
+        </div>
+      </section>
+    </Layout>
+  );
+};
 
 export default IndexPageEN;

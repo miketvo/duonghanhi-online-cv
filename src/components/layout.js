@@ -32,7 +32,7 @@ import "./layout.module.css";
 
 const Layout = ({ lang, children }) => {
   const data = useStaticQuery(graphql`
-    query SiteQuery {
+    query SiteMetadataQuery {
       site {
         siteMetadata {
           vietnameseHeader {
