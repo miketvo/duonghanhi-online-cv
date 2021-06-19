@@ -20,7 +20,7 @@ const StickyNav = ({ navLinks }) => (
   <nav id={"sticky-nav"} className={styles.stickyNav}>
     <ul>
       {navLinks.map(link => (
-        <li>
+        <li key={link.link}>
           <a href={link.link}>{link.name}</a>
         </li>
       ))}
