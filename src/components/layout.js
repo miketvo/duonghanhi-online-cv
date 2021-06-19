@@ -32,7 +32,7 @@ import "./layout.module.css";
 
 const Layout = ({ lang, children }) => {
   const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
+    query SiteQuery {
       site {
         siteMetadata {
           vietnameseHeader {
@@ -56,8 +56,8 @@ const Layout = ({ lang, children }) => {
     }
   `);
 
-  let headerName = "Title";
-  let headerDesc = "Description";
+  let headerName;
+  let headerDesc;
   let navLinks = [];
   switch (lang) {
     case "vi":
@@ -70,6 +70,9 @@ const Layout = ({ lang, children }) => {
       headerDesc = data.site.siteMetadata.englishHeader.description;
       navLinks = data.site.siteMetadata.englishHeader.navLinks;
       break;
+    default:
+      headerName = "Title";
+      headerDesc = "Description";
   }
 
   return (

@@ -27,6 +27,8 @@ const LangMenu = ({ lang }) => {
     case "en":
       classNames["en"] = style.active;
       break;
+    default:
+      break;
   }
 
   return (
