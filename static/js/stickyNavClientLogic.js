@@ -14,7 +14,7 @@
 
 const stickyNav = document.getElementById("sticky-nav");
 
-if (stickyNav !== undefined) {
+if (stickyNav) {
   let stickyPos = stickyNav.offsetTop;
 
   window.addEventListener("scroll", function () {
