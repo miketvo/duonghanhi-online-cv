@@ -22,6 +22,7 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
+import { withPrefix } from "gatsby";
 import { useStaticQuery, graphql } from "gatsby";
 
 function Seo({ description, lang, meta, title }) {
@@ -66,7 +67,12 @@ function Seo({ description, lang, meta, title }) {
           content: `website`,
         },
       ].concat(meta)}
-    />
+    >
+      <script
+        src={withPrefix("stickyNavClientLogic.js")}
+        type={"text/javascript"}
+      />
+    </Helmet>
   );
 }
 

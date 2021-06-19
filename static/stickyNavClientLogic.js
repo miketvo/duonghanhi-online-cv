@@ -12,20 +12,5 @@
  * STRICTLY PROHIBITED.
  */
 
-import * as React from "react";
-
-import * as styles from "./stickyNav.module.css";
-
-const StickyNav = ({ navLinks }) => (
-  <nav id={"sticky-nav"} className={styles.stickyNav}>
-    <ul>
-      {navLinks.map(link => (
-        <li>
-          <a href={link.link}>{link.name}</a>
-        </li>
-      ))}
-    </ul>
-  </nav>
-);
-
-export default StickyNav;
+const stickyNav = document.getElementById("sticky-nav");
+console.log(stickyNav);
