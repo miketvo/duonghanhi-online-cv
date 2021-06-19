@@ -68,6 +68,7 @@ function Seo({ description, lang, meta, title }) {
         },
       ].concat(meta)}
     >
+      <link href={withPrefix("animations.css")} rel={"stylesheet"} />
       <link href={withPrefix("styles.css")} rel={"stylesheet"} />
       <script
         src={withPrefix("js/stickyNavClientLogic.js")}
