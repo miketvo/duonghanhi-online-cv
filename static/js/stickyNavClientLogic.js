@@ -13,7 +13,10 @@
  */
 
 const stickyNav = document.getElementById("sticky-nav");
+const toTopButton = document.getElementById("to-top-button");
+const langSwitchButton = document.getElementById("lang-switch-button");
 
+// Primary navigation UI logic
 if (stickyNav) {
   let stickyNavStyles = getComputedStyle(stickyNav);
   let stickyPos = stickyNav.offsetTop;
@@ -63,6 +66,59 @@ if (stickyNav) {
       }
     } else {
       stickyNav.classList.remove("sticky-nav-stick");
+    }
+  });
+}
+
+// Auxiliary navigation UI logic
+if (stickyNav && toTopButton && langSwitchButton) {
+  let stickyNavOffsetTop = stickyNav.offsetTop;
+
+  toTopButton.addEventListener("mouseenter", function () {
+    toTopButton.setAttribute(
+      "style",
+      "transform: translateX(0); opacity: 1.0; cursor: pointer;"
+    );
+  });
+  toTopButton.addEventListener("mouseleave", function () {
+    toTopButton.setAttribute(
+      "style",
+      "transform: translateX(60px); opacity: 1.0;"
+    );
+  });
+
+  langSwitchButton.addEventListener("mouseenter", function () {
+    langSwitchButton.setAttribute(
+      "style",
+      "transform: translateX(0); opacity: 1.0;"
+    );
+  });
+  langSwitchButton.addEventListener("mouseleave", function () {
+    langSwitchButton.setAttribute(
+      "style",
+      "transform: translateX(-60px); opacity: 1.0;"
+    );
+  });
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY >= stickyNavOffsetTop) {
+      toTopButton.setAttribute(
+        "style",
+        "transform: translateX(60px); opacity: 1.0;"
+      );
+      langSwitchButton.setAttribute(
+        "style",
+        "transform: translateX(-60px); opacity: 1.0;"
+      );
+    } else {
+      toTopButton.setAttribute(
+        "style",
+        "transform: translateX(75px); opacity: 0;"
+      );
+      langSwitchButton.setAttribute(
+        "style",
+        "transform: translateX(-75px); opacity: 0;"
+      );
     }
   });
 }
