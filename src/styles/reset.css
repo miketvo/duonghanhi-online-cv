@@ -20,10 +20,6 @@ html {
   overflow-y: scroll;
 }
 body {
-  background-image: url("../images/bg.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -69,7 +65,7 @@ template {
   display: none;
 }
 a {
-  color: #d9a9ac;
+  color: #122577;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }

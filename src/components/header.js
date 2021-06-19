@@ -23,7 +23,7 @@ const Header = ({ name, description, navLinks, lang }) => (
   <header id={"top"} className={styles.header}>
     <LangMenu lang={lang} />
     <div className={styles.titleWrapper}>
-      <h1 className={styles.title}>{name}</h1>
+      <h1 className={styles.title}>Dương Hà&nbsp;Nhi</h1>
       <p className={styles.subtitle}>{description}</p>
     </div>
     <StickyNav navLinks={navLinks} />
