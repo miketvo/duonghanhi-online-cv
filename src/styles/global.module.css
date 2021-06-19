@@ -21,6 +21,7 @@
 
   /* Colors */
   --black: #000;
+  --shadow-black: rgba(0, 0, 0, 0.3);
   --white: #fffeff;
   --light-grey: #cdcfcf;
   --dark-grey: #5e5f5f;

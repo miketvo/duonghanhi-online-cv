@@ -17,10 +17,14 @@ import { StaticImage } from "gatsby-plugin-image";
 
 import Layout from "../components/layout";
 import Seo from "../components/seo";
+import LangSwitch from "../components/langSwitch";
+import ToTop from "../components/toTop";
 
 const IndexPageVI = () => (
   <Layout lang={"vi"}>
     <Seo lang={"vi"} />
+    <LangSwitch lang={"vi"} />
+    <ToTop />
 
     <section id={"bio"}>
       <div>

@@ -15,43 +15,44 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 
-import * as style from "./langMenu.module.css";
+import * as styles from "./langSwitch.module.css";
 
-const LangMenu = ({ lang }) => {
-  let classNames = [];
+const LangSwitch = ({ lang }) => {
+  let langText;
+  let langHref;
   switch (lang) {
     case "vi":
-      classNames["vi"] = style.active;
+      langText = "EN";
+      langHref = "\\en";
       break;
     case "en":
-      classNames["en"] = style.active;
+      langText = "VI";
+      langHref = "\\";
       break;
     default:
-      break;
+      langText = "";
+      langHref = "";
   }
 
   return (
-    <ul className={style.langMenu}>
-      <li>
-        <a className={[classNames["vi"], style.link].join(" ")} href="/">
-          Tiếng Việt
-        </a>
-      </li>
-      <li>
-        <a className={[classNames["en"], style.link].join(" ")} href="/en">
-          English
-        </a>
-      </li>
-    </ul>
+    <>
+      <a
+        id={"lang-switch-button"}
+        className={styles.langSwitch}
+        href={langHref}
+      >
+        <span>{langText}</span>
+      </a>
+    </>
   );
 };
 
-LangMenu.propTypes = {
+LangSwitch.propTypes = {
   lang: PropTypes.string,
 };
 
-LangMenu.defaultProps = {
+LangSwitch.defaultProps = {
   lang: ``,
 };
 
-export default LangMenu;
+export default LangSwitch;
