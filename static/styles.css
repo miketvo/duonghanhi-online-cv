@@ -36,6 +36,10 @@
   opacity: 1.0;
 }
 
+.sticky-nav-stick ul li a:after {
+  width: 0;
+}
+
 .sticky-nav-stick ul li .active {
   opacity: 1.0;
 }
