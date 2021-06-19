@@ -74,6 +74,10 @@ function Seo({ description, lang, meta, title }) {
         src={withPrefix("js/stickyNavClientLogic.js")}
         type={"text/javascript"}
       />
+      <script
+        src={withPrefix("js/auxiliaryNavClientLogic.js")}
+        type={"text/javascript"}
+      />
     </Helmet>
   );
 }

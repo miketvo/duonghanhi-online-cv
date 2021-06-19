@@ -13,6 +13,7 @@
  */
 
 .lang-switch {
+  opacity: 0;
   position: fixed;
   bottom: 10%;
   left: 0;
@@ -35,10 +36,6 @@
   -webkit-box-shadow: 3px 3px 6px 0 var(--shadow-black);
   -o-box-shadow: 3px 3px 6px 0 var(--shadow-black);
   box-shadow: 3px 3px 6px 0 var(--shadow-black);
-  transform: translateX(-60px);
-  transition: transform 0.3s;
-}
-
-.lang-switch:hover {
-  transform: initial;
+  transform: translateX(-75px);
+  transition: opacity 0.3s, transform 0.3s;
 }
