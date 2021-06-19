@@ -79,21 +79,24 @@ const IndexPageVI = () => (
       <div>
         <h3>2017 - 2021</h3>
         <h2>Gia sư bộ môn Hóa học</h2>
-        <StaticImage />
+        <StaticImage
+          src={"../images/adam-winger-UFG04g43hqs-unsplash.jpg"}
+          alt={""}
+        />
         <p>Hỗ trợ nhóm học sinh lấy gốc môn Hóa, ôn luyện thi Đại học.</p>
       </div>
 
       <div>
         <h3>2019</h3>
         <h2>Cuộc thi Hunarobo lần 7</h2>
-        <StaticImage />
+        <StaticImage src={"../images/Hunarobo.JPG"} alt={""} />
         <p>Hỗ trợ thí sinh và ban tổ chức trong quá trình cuộc thi.</p>
       </div>
 
       <div>
         <h3>2019 - 2020</h3>
         <h2>Công ty Cổ phần Anh ngữ Apax</h2>
-        <StaticImage />
+        <StaticImage src={"../images/Apax.jpg"} alt={""} />
         <p>
           Trợ giảng tiếng Anh, hỗ trợ giáo viên bản ngữ giảng dạy, phiên dịch
           các cuộc họp giữa giáo viên và phụ huynh.
@@ -103,14 +106,14 @@ const IndexPageVI = () => (
       <div>
         <h3>2020</h3>
         <h2>Trường THPT Khoa học Giáo dục HES - VNU</h2>
-        <StaticImage />
+        <StaticImage src={"../images/HES.JPG"} alt={""} />
         <p>Thực hiện công tác kiến tập sư phạm.</p>
       </div>
 
       <div>
         <h3>2021</h3>
         <h2>Trường THPT Trần Phú - Hoàn Kiếm</h2>
-        <StaticImage />
+        <StaticImage src={"../images/TP-HK.JPG"} alt={""} />
         <p>Thực hiện công tác thực tập sư phạm.</p>
       </div>
     </section>
