@@ -37,10 +37,33 @@
 }
 
 .sticky-nav li a {
+  position: relative;
   color: inherit;
   text-decoration: none;
 }
 
-.sticky-nav li a:hover {
-  text-decoration: underline;
+.sticky-nav li a:after {
+  content: "";
+  position: absolute;
+  top: calc(2.2rem + 15px);
+  left: 0;
+  height: 0.05rem;
+  width: 100%;
+  background: var(--white);
+  opacity: 0;
+  transition: transform 0.3s;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+.sticky-nav li a:hover:after,
+.sticky-nav li a:focus:after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+@media only screen and (--viewport-narrow) {
+  .sticky-nav {
+    display: none;
+  }
 }

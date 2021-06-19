@@ -31,14 +31,18 @@ const LangMenu = ({ lang }) => {
   }
 
   return (
-    <div className={style.langMenu}>
-      <a className={[classNames["vi"], style.link].join(" ")} href="/">
-        Tiếng Việt
-      </a>
-      <a className={[classNames["en"], style.link].join(" ")} href="/en">
-        English
-      </a>
-    </div>
+    <ul className={style.langMenu}>
+      <li>
+        <a className={[classNames["vi"], style.link].join(" ")} href="/">
+          Tiếng Việt
+        </a>
+      </li>
+      <li>
+        <a className={[classNames["en"], style.link].join(" ")} href="/en">
+          English
+        </a>
+      </li>
+    </ul>
   );
 };
 

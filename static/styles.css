@@ -12,6 +12,7 @@
  * STRICTLY PROHIBITED.
  */
 
+/* Desktop sticky navigation bar styles */
 .sticky-nav-stick {
     position: fixed;
     top: 0;
@@ -20,4 +21,12 @@
     background: var(--black);
     transform-origin: top;
     animation: fadeInExpandY 0.5s;
+}
+
+.sticky-nav-stick-active {
+    opacity: 1.0;
+}
+
+.sticky-nav-stick-inactive {
+    opacity: 0.4;
 }

@@ -38,6 +38,7 @@
   text-align: -moz-center;
   text-align: -webkit-center;
   text-align: center;
+  transition: transform 0.5s;
 }
 
 .title {
@@ -48,4 +49,11 @@
 .subtitle {
   font-size: 1.3rem;
   padding-bottom: 0;
+}
+
+.title:hover,
+.title:focus,
+.subtitle:hover,
+.subtitle:focus {
+  transform: rotateY(15deg);
 }

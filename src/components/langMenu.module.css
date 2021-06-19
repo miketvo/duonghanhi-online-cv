@@ -12,8 +12,18 @@
  * STRICTLY PROHIBITED.
  */
 
-.lang-menu .link {
+.lang-menu {
+  margin: 0;
+}
+
+.lang-menu li {
+  position: relative;
+  display: inline;
+  list-style: none;
   margin: 20px;
+}
+
+.lang-menu .link {
   color: var(--white);
   font-family: var(--secondary-font);
   font-size: 1rem;
@@ -22,11 +32,29 @@
   transition: 0.15s;
 }
 
-.lang-menu .link:hover {
+.lang-menu .link:hover,
+.lang-menu .link:focus {
   opacity: 1.0;
 }
 
 .active {
-  text-decoration: underline !important;
   opacity: 1.0 !important;
+}
+
+.active:after {
+  content: "";
+  position: absolute;
+  top: calc(1rem + 3px);
+  left: 0;
+  height: 0.08rem;
+  width: 100%;
+  border-radius: 1rem;
+  background: var(--white);
+  transform-origin: left;
+  transition: transform 0.15s;
+}
+
+.active:hover:after,
+.active:focus:after {
+  transform: scaleX(0);
 }
