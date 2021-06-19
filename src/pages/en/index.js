@@ -25,7 +25,10 @@ const IndexPageEN = () => (
     <section id={"bio"}>
       <div>
         <div>
-          <StaticImage src={"../images/portrait.jpg"} alt={"Portrait photo"} />
+          <StaticImage
+            src={"../../images/portrait.jpg"}
+            alt={"Portrait photo"}
+          />
         </div>
         <div>
           <p>Hello! My name is Dương Hà Nhi.</p>
@@ -80,7 +83,7 @@ const IndexPageEN = () => (
         <h3>2017 - 2021</h3>
         <h2>Chemistry Tutor</h2>
         <StaticImage
-          src={"../images/adam-winger-UFG04g43hqs-unsplash.jpg"}
+          src={"../../images/adam-winger-UFG04g43hqs-unsplash.jpg"}
           alt={""}
         />
         <p>
@@ -92,14 +95,14 @@ const IndexPageEN = () => (
       <div>
         <h3>2019</h3>
         <h2>Hunarobo Contest 7</h2>
-        <StaticImage src={"../images/Hunarobo.JPG"} alt={""} />
+        <StaticImage src={"../../images/Hunarobo.JPG"} alt={""} />
         <p>Assisting in organisational logistics and contestants support.</p>
       </div>
 
       <div>
         <h3>2019 - 2020</h3>
         <h2>Apax English</h2>
-        <StaticImage src={"../images/Apax.jpg"} alt={""} />
+        <StaticImage src={"../../images/Apax.jpg"} alt={""} />
         <p>
           English teaching assistant for native and non-native teaching staffs,
           bilingual English-Vietnamese interpretation for parent meetings.
@@ -109,14 +112,14 @@ const IndexPageEN = () => (
       <div>
         <h3>2020</h3>
         <h2>HES - VNU Highschool of Education Science</h2>
-        <StaticImage src={"../images/HES.JPG"} alt={""} />
+        <StaticImage src={"../../images/HES.JPG"} alt={""} />
         <p>Practicing in Pedagogy.</p>
       </div>
 
       <div>
         <h3>2021</h3>
         <h2>Trần Phú - Hoàn Kiếm Highschool</h2>
-        <StaticImage src={"../images/TP-HK.JPG"} alt={""} />
+        <StaticImage src={"../../images/TP-HK.JPG"} alt={""} />
         <p>Professional training in Pedagogy.</p>
       </div>
     </section>

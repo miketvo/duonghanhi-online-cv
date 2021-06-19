@@ -12,16 +12,10 @@
  * STRICTLY PROHIBITED.
  */
 
-const stickyNav = document.getElementById("sticky-nav");
-
-if (stickyNav !== undefined) {
-  let stickyPos = stickyNav.offsetTop;
-
-  window.addEventListener("scroll", function () {
-    if (window.pageYOffset >= stickyPos) {
-      stickyNav.classList.add("sticky-nav-stick");
-    } else {
-      stickyNav.classList.remove("sticky-nav-stick");
-    }
-  });
+.sticky-nav-stick {
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    background: var(--black);
+    padding: 40px 0 30px 0;
 }

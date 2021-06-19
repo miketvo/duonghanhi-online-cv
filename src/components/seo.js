@@ -68,8 +68,9 @@ function Seo({ description, lang, meta, title }) {
         },
       ].concat(meta)}
     >
+      <link href={withPrefix("styles.css")} rel={"stylesheet"} />
       <script
-        src={withPrefix("stickyNavClientLogic.js")}
+        src={withPrefix("js/stickyNavClientLogic.js")}
         type={"text/javascript"}
       />
     </Helmet>
