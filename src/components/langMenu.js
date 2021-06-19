@@ -33,12 +33,12 @@ const LangMenu = ({ lang }) => {
 
   return (
     <div className={style.langMenu}>
-      <Link className={[classNames["vi"], style.link].join(" ")} to="/">
+      <a className={[classNames["vi"], style.link].join(" ")} href="/">
         Tiếng Việt
-      </Link>
-      <Link className={[classNames["en"], style.link].join(" ")} to="/en">
+      </a>
+      <a className={[classNames["en"], style.link].join(" ")} href="/en">
         English
-      </Link>
+      </a>
     </div>
   );
 };
