@@ -20,7 +20,7 @@ import StickyNav from "./stickyNav";
 import * as styles from "./header.module.css";
 
 const Header = ({ name, description, navLinks, lang }) => (
-  <header className={styles.header}>
+  <header id={"top"} className={styles.header}>
     <LangMenu lang={lang} />
     <div className={styles.titleWrapper}>
       <h1 className={styles.title}>{name}</h1>

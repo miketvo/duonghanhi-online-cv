@@ -13,15 +13,24 @@
  */
 
 import * as React from "react";
+import scrollTo from "gatsby-plugin-smoothscroll";
 
 import * as styles from "./stickyNav.module.css";
 
 const StickyNav = ({ navLinks }) => (
-  <nav className={styles.stickyNav}>
+  <nav id={"sticky-nav"} className={styles.stickyNav}>
     <ul>
       {navLinks.map(link => (
-        <li>
-          <a href={link.link}>{link.name}</a>
+        <li key={link.link}>
+          <button
+            name={link.link}
+            onClick={event => {
+              scrollTo(link.link);
+              event.preventDefault();
+            }}
+          >
+            {link.name}
+          </button>
         </li>
       ))}
     </ul>

@@ -21,6 +21,7 @@
 
   /* Colors */
   --black: #000;
+  --shadow-black: rgba(0, 0, 0, 0.3);
   --white: #fffeff;
   --light-grey: #cdcfcf;
   --dark-grey: #5e5f5f;
@@ -37,3 +38,8 @@
   --content-w-narrow: 767px;
   --content-w-min: 320px;
 }
+
+@custom-media --viewport-phone (max-width: 767px);
+@custom-media --viewport-narrow (max-width: 1280px);
+@custom-media --viewport-regular (min-width: 1920px);
+@custom-media --viewport-wide (min-width: 2560px);

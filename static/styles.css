@@ -1,0 +1,57 @@
+/*
+ * Copyright (c) 2021 Mike Vo (info@miketvo.com) - All Rights Reserved.
+ *
+ * This file is part of the project "duonghanhi-online-cv".
+ *
+ * This project is an online curriculum vitae authored by Mike Vo - hereby
+ * referred to as "the author" - for Ms. Duong Ha Nhi - hereby referred to as
+ * "the client".
+ *
+ * COPYING AND/OR DISTRIBUTING OF ANY CONTENT WITHIN THIS PROJECT WITHOUT EX-
+ * PRESS PERMISSION FROM THE CLIENT AND/OR THE AUTHOR, VIA ANY MEDIUM IS
+ * STRICTLY PROHIBITED.
+ */
+
+/* Desktop sticky navigation bar styles */
+.sticky-nav-stick {
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  padding: 40px 0 30px 0;
+  background: var(--black);
+  transform-origin: top;
+  animation: fadeInExpandY 0.5s;
+}
+
+.sticky-nav-stick ul li {
+  position: relative;
+}
+
+.sticky-nav-stick ul li button {
+  opacity: 0.4;
+  transition: opacity 0.3s;
+}
+
+.sticky-nav-stick ul li button:hover {
+  opacity: 1.0;
+}
+
+.sticky-nav-stick ul li button:after {
+  width: 0;
+}
+
+.sticky-nav-stick ul li .active {
+  opacity: 1.0;
+}
+
+.sticky-nav-stick ul li .active:after {
+  content: "";
+  position: absolute;
+  top: 2.2rem;
+  left: 0;
+  height: 0.05rem;
+  width: 100%;
+  background: var(--white);
+  opacity: initial;
+  transform: initial;
+}

@@ -28,7 +28,6 @@
   color: var(--white);
   font-family: var(--nav-font);
   font-size: 2.2rem;
-  text-transform: uppercase;
   margin: 0;
 }
 
@@ -36,11 +35,41 @@
   list-style: none;
 }
 
-.sticky-nav li a {
+.sticky-nav li button {
+  position: relative;
+  background: none;
+  border: none;
   color: inherit;
-  text-decoration: none;
+  text-transform: uppercase;
 }
 
-.sticky-nav li a:hover {
-  text-decoration: underline;
+.sticky-nav li button:hover,
+.sticky-nav li button:focus {
+  cursor: pointer;
+}
+
+.sticky-nav li button:after {
+  content: "";
+  position: absolute;
+  top: 2.2rem;
+  left: 0;
+  height: 0.05rem;
+  width: 100%;
+  background: var(--white);
+  opacity: 0;
+  transition: transform 0.3s;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+.sticky-nav li button:hover:after,
+.sticky-nav li button:focus:after {
+  opacity: inherit;
+  transform: scaleX(1);
+}
+
+@media only screen and (--viewport-narrow) {
+  .sticky-nav {
+    display: none;
+  }
 }

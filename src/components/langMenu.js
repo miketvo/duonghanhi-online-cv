@@ -14,7 +14,6 @@
 
 import * as React from "react";
 import PropTypes from "prop-types";
-import { Link } from "gatsby";
 
 import * as style from "./langMenu.module.css";
 
@@ -27,26 +26,32 @@ const LangMenu = ({ lang }) => {
     case "en":
       classNames["en"] = style.active;
       break;
+    default:
+      break;
   }
 
   return (
-    <div className={style.langMenu}>
-      <Link className={[classNames["vi"], style.link].join(" ")} to="/">
-        Tiếng Việt
-      </Link>
-      <Link className={[classNames["en"], style.link].join(" ")} to="/en">
-        English
-      </Link>
-    </div>
+    <ul className={style.langMenu}>
+      <li>
+        <a className={[classNames["vi"], style.link].join(" ")} href="/">
+          Tiếng Việt
+        </a>
+      </li>
+      <li>
+        <a className={[classNames["en"], style.link].join(" ")} href="/en">
+          English
+        </a>
+      </li>
+    </ul>
   );
 };
 
 LangMenu.propTypes = {
-  siteTitle: PropTypes.string,
+  lang: PropTypes.string,
 };
 
 LangMenu.defaultProps = {
-  activeLang: ``,
+  lang: ``,
 };
 
 export default LangMenu;
