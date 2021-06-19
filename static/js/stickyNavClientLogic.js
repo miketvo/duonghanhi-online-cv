@@ -26,7 +26,7 @@ if (stickyNav) {
       stickyNavChildren.forEach(function (child) {
         sectionPositions.push(
           document.getElementById(
-            child.firstChild.getAttribute("href").slice(1)
+            child.firstChild.getAttribute("name").slice(1)
           ).offsetTop
         );
       });

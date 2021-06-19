@@ -27,16 +27,16 @@
   position: relative;
 }
 
-.sticky-nav-stick ul li a {
+.sticky-nav-stick ul li button {
   opacity: 0.4;
   transition: opacity 0.3s;
 }
 
-.sticky-nav-stick ul li a:hover {
+.sticky-nav-stick ul li button:hover {
   opacity: 1.0;
 }
 
-.sticky-nav-stick ul li a:after {
+.sticky-nav-stick ul li button:after {
   width: 0;
 }
 
@@ -47,7 +47,7 @@
 .sticky-nav-stick ul li .active:after {
   content: "";
   position: absolute;
-  top: calc(2.2rem + 15px);
+  top: 2.2rem;
   left: 0;
   height: 0.05rem;
   width: 100%;
