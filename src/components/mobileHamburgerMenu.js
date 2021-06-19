@@ -13,13 +13,13 @@
  */
 
 import * as React from "react";
-import scrollTo from "gatsby-plugin-smoothscroll";
 import PropTypes from "prop-types";
+import scrollTo from "gatsby-plugin-smoothscroll";
+import LangMenu from "./langMenu";
 
-import * as styles from "./stickyNav.module.css";
-
-const StickyNav = ({ navLinks }) => (
-  <nav id={"sticky-nav"} className={styles.stickyNav}>
+const MobileHamburgerMenu = ({ lang, navLinks }) => (
+  <div id={"mobile-hamburger-menu"}>
+    <LangMenu lang={lang} />
     <ul>
       {navLinks.map(link => (
         <li key={link.link}>
@@ -35,11 +35,23 @@ const StickyNav = ({ navLinks }) => (
         </li>
       ))}
     </ul>
-  </nav>
+    <button
+      onClick={function () {
+        scrollTo("#top");
+      }}
+    >
+      Back to Top
+    </button>
+  </div>
 );
 
-StickyNav.propTypes = {
+LangMenu.propTypes = {
+  lang: PropTypes.string,
   navLinks: PropTypes.node.isRequired,
 };
 
-export default StickyNav;
+LangMenu.defaultProps = {
+  lang: ``,
+};
+
+export default MobileHamburgerMenu;

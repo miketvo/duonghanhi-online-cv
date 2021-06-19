@@ -44,3 +44,9 @@
 .icon {
   width: 12px;
 }
+
+@media only screen and (--viewport-phone) {
+  .to-top {
+    display: none;
+  }
+}

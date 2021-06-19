@@ -29,6 +29,7 @@ import "../styles/accessibility.css";
 import "../styles/global.module.css";
 import "../fonts/fonts.css";
 import "./layout.module.css";
+import MobileHamburgerMenu from "./mobileHamburgerMenu";
 
 const Layout = ({ lang, children }) => {
   const data = useStaticQuery(graphql`
@@ -83,6 +84,7 @@ const Layout = ({ lang, children }) => {
         description={headerDesc}
         navLinks={navLinks}
       />
+      <MobileHamburgerMenu lang={lang} navLinks={navLinks} />
       <main>{children}</main>
       <footer>
         COPYRIGHT DƯƠNG HÀ NHI ©{new Date().getFullYear()} | WEBSITE BY
