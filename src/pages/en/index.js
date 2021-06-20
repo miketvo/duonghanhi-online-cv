@@ -159,31 +159,41 @@ const IndexPageEN = () => (
     </section>
 
     <section id={"skills"}>
-      <div>
-        <h2>English</h2>
+      <div className={indexStyles.skillsWrapper}>
         <div>
-          <span>IELTS 6.0</span>
+          <h2>English</h2>
+          <div>
+            <span>IELTS 6.0</span>
+          </div>
         </div>
-      </div>
 
-      <div>
-        <h2>Office Information Technology</h2>
-        <div></div>
-      </div>
+        <div>
+          <h2>Office Information Technology</h2>
+          <div>
+            <span />
+          </div>
+        </div>
 
-      <div>
-        <h2>Video Editing</h2>
-        <div></div>
-      </div>
+        <div>
+          <h2>Video Editing</h2>
+          <div>
+            <span />
+          </div>
+        </div>
 
-      <div>
-        <h2>Photo Design</h2>
-        <div></div>
-      </div>
+        <div>
+          <h2>Photo Design</h2>
+          <div>
+            <span />
+          </div>
+        </div>
 
-      <div>
-        <h2>Teamwork</h2>
-        <div></div>
+        <div>
+          <h2>Teamwork</h2>
+          <div>
+            <span />
+          </div>
+        </div>
       </div>
     </section>
 

@@ -157,31 +157,42 @@ const IndexPageVI = () => (
     </section>
 
     <section id={"skills"}>
-      <div>
-        <h2>Tiếng Anh</h2>
-        <div>
-          <span>IELTS 6.0</span>
+      <div className={indexStyles.skillsWrapper}>
+        <div className={indexStyles.skill}>
+          <h2>Tiếng Anh</h2>
+          <div className={indexStyles.skillsBarWrapper}>
+            <span className={indexStyles.skillsBar} style={{ width: "60%" }} />
+            <span className={indexStyles.skillsBarCaption}>IELTS 6.0</span>
+          </div>
         </div>
-      </div>
 
-      <div>
-        <h2>Tin học văn phòng</h2>
-        <div></div>
-      </div>
+        <div className={indexStyles.skill}>
+          <h2>Tin&nbsp;học văn&nbsp;phòng</h2>
+          <div className={indexStyles.skillsBarWrapper}>
+            <span className={indexStyles.skillsBar} style={{ width: "75%" }} />
+          </div>
+        </div>
 
-      <div>
-        <h2>Edit video</h2>
-        <div></div>
-      </div>
+        <div className={indexStyles.skill}>
+          <h2>Edit video</h2>
+          <div className={indexStyles.skillsBarWrapper}>
+            <span className={indexStyles.skillsBar} style={{ width: "55%" }} />
+          </div>
+        </div>
 
-      <div>
-        <h2>Design ảnh</h2>
-        <div></div>
-      </div>
+        <div className={indexStyles.skill}>
+          <h2>Design ảnh</h2>
+          <div className={indexStyles.skillsBarWrapper}>
+            <span className={indexStyles.skillsBar} style={{ width: "82%" }} />
+          </div>
+        </div>
 
-      <div>
-        <h2>Teamwork</h2>
-        <div></div>
+        <div className={indexStyles.skill}>
+          <h2>Teamwork</h2>
+          <div className={indexStyles.skillsBarWrapper}>
+            <span className={indexStyles.skillsBar} style={{ width: "92%" }} />
+          </div>
+        </div>
       </div>
     </section>
 
