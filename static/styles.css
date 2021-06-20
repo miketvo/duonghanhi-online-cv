@@ -68,6 +68,7 @@
 
 .mobile-hamburger-menu-button-active {
   background: none !important;
+  box-shadow: none !important;
 }
 
 .mobile-hamburger-menu-button-active div:first-child {
