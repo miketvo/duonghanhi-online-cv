@@ -50,18 +50,22 @@ const IndexPageEN = () => (
     </section>
 
     <section id={"education"}>
-      <div>
-        <div>
+      <div className={styles.educationWrapper}>
+        <div className={styles.educationEntryYear}>
           <h2>2014</h2>
         </div>
-        <div>
+        <span className={styles.educationEntrySeparator} />
+        <div className={styles.educationDecoration} />
+        <div className={styles.educationEntryDescription}>
           <h2>Trần Phú - Hoàn Kiếm Highschool</h2>
         </div>
 
-        <div>
+        <div className={styles.educationEntryYear}>
           <h2>2017</h2>
         </div>
-        <div>
+        <span className={styles.educationEntrySeparator} />
+        <div className={styles.educationDecoration} />
+        <div className={styles.educationEntryDescription}>
           <h2>Vietnam National University, Hanoi</h2>
           <p>
             University of Education
@@ -70,10 +74,12 @@ const IndexPageEN = () => (
           </p>
         </div>
 
-        <div>
-          <h2>2017</h2>
+        <div className={styles.educationEntryYear}>
+          <h2>2020</h2>
         </div>
-        <div>
+        <span className={styles.educationEntrySeparator} />
+        <div className={styles.educationDecoration} />
+        <div className={styles.educationEntryDescription}>
           <h2>Vietnam National University, Hanoi</h2>
           <p>
             University of Languages and International Studies

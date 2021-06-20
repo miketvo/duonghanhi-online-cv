@@ -50,35 +50,41 @@ const IndexPageVI = () => (
     </section>
 
     <section id={"education"}>
-      <div>
-        <div>
+      <div className={styles.educationWrapper}>
+        <div className={styles.educationEntryYear}>
           <h2>2014</h2>
         </div>
-        <div>
-          <h2>THPT Trần Phú - Hoàn Kiếm</h2>
+        <span className={styles.educationEntrySeparator} />
+        <div className={styles.educationDecoration} />
+        <div className={styles.educationEntryDescription}>
+          <h2>THPT Trần&nbsp;Phú - Hoàn&nbsp;Kiếm</h2>
         </div>
 
-        <div>
+        <div className={styles.educationEntryYear}>
           <h2>2017</h2>
         </div>
-        <div>
-          <h2>Đại học Quốc gia Hà Nội</h2>
+        <span className={styles.educationEntrySeparator} />
+        <div className={styles.educationDecoration} />
+        <div className={styles.educationEntryDescription}>
+          <h2>Đại học Quốc&nbsp;gia Hà&nbsp;Nội</h2>
           <p>
-            Trường Đại học Giáo dục
+            Trường Đại&nbsp;học Giáo&nbsp;dục
             <br />
-            Khoa Sư phạm Hóa học
+            Khoa Sư&nbsp;phạm Hóa&nbsp;học
           </p>
         </div>
 
-        <div>
-          <h2>2017</h2>
+        <div className={styles.educationEntryYear}>
+          <h2>2020</h2>
         </div>
-        <div>
-          <h2>Đại học Quốc gia Hà Nội</h2>
+        <span className={styles.educationEntrySeparator} />
+        <div className={styles.educationDecoration} />
+        <div className={styles.educationEntryDescription}>
+          <h2>Đại&nbsp;học Quốc&nbsp;gia Hà&nbsp;Nội</h2>
           <p>
-            Trường Đại học Ngoại ngữ
+            Trường Đại&nbsp;học Ngoại&nbsp;ngữ
             <br />
-            Ngành Biên dịch - Phiên dịch, Khoa Ngôn ngữ Anh
+            Ngành Biên&nbsp;dịch - Phiên&nbsp;dịch, Khoa Ngôn ngữ Anh
           </p>
         </div>
       </div>
@@ -87,12 +93,12 @@ const IndexPageVI = () => (
     <section id={"experiences"}>
       <div>
         <h3>2017 - 2021</h3>
-        <h2>Gia sư bộ môn Hóa học</h2>
+        <h2>Gia sư bộ môn Hóa&nbsp;học</h2>
         <StaticImage
           src={"../images/adam-winger-UFG04g43hqs-unsplash.jpg"}
           alt={""}
         />
-        <p>Hỗ trợ nhóm học sinh lấy gốc môn Hóa, ôn luyện thi Đại học.</p>
+        <p>Hỗ trợ nhóm học sinh lấy gốc môn Hóa, ôn luyện thi Đại&nbsp;học.</p>
       </div>
 
       <div>
@@ -104,7 +110,7 @@ const IndexPageVI = () => (
 
       <div>
         <h3>2019 - 2020</h3>
-        <h2>Công ty Cổ phần Anh ngữ Apax</h2>
+        <h2>Công ty Cổ&nbsp;phần Anh ngữ Apax</h2>
         <StaticImage src={"../images/Apax.jpg"} alt={""} />
         <p>
           Trợ giảng tiếng Anh, hỗ trợ giáo viên bản ngữ giảng dạy, phiên dịch
@@ -114,14 +120,14 @@ const IndexPageVI = () => (
 
       <div>
         <h3>2020</h3>
-        <h2>Trường THPT Khoa học Giáo dục HES - VNU</h2>
+        <h2>Trường THPT Khoa&nbsp;học Giáo&nbsp;dục HES - VNU</h2>
         <StaticImage src={"../images/HES.JPG"} alt={""} />
         <p>Thực hiện công tác kiến tập sư phạm.</p>
       </div>
 
       <div>
         <h3>2021</h3>
-        <h2>Trường THPT Trần Phú - Hoàn Kiếm</h2>
+        <h2>Trường THPT Trần&nbsp;Phú - Hoàn&nbsp;Kiếm</h2>
         <StaticImage src={"../images/TP-HK.JPG"} alt={""} />
         <p>Thực hiện công tác thực tập sư phạm.</p>
       </div>
