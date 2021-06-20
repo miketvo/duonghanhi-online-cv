@@ -124,7 +124,7 @@
   margin: auto;
 }
 
-@media only screen and (--viewport-phone) {
+@media only screen and (--viewport-narrow) {
   .toggle-button-wrapper {
     display: -webkit-flex;
     display: -moz-flex;

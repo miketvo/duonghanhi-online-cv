@@ -19,6 +19,7 @@ body {
   background-position: 0 0;
   background-attachment: fixed;
   font-family: var(--primary-font) !important;
+  overflow-x: hidden;
 }
 
 a {
@@ -48,6 +49,6 @@ footer {
 
 @media only screen and (--viewport-phone) {
   main {
-    margin: 0 40px;
+    margin: 0 20px;
   }
 }

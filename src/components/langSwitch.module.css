@@ -40,7 +40,7 @@
   transition: opacity 0.3s, transform 0.3s;
 }
 
-@media only screen and (--viewport-phone) {
+@media only screen and (--viewport-narrow) {
   .lang-switch {
     display: none;
   }

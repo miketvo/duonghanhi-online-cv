@@ -61,6 +61,6 @@
 
 @media only screen and (--viewport-phone) {
   .titleWrapper {
-    margin: 20vh 0;
+    margin: 15vh 0 35vh 0;
   }
 }

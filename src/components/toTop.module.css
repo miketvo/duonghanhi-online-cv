@@ -45,7 +45,7 @@
   width: 12px;
 }
 
-@media only screen and (--viewport-phone) {
+@media only screen and (--viewport-narrow) {
   .to-top {
     display: none;
   }

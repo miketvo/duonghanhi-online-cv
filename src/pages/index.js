@@ -19,6 +19,7 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 import LangSwitch from "../components/langSwitch";
 import ToTop from "../components/toTop";
+import * as styles from "./index.module.css";
 
 const IndexPageVI = () => (
   <Layout lang={"vi"}>
@@ -27,18 +28,22 @@ const IndexPageVI = () => (
     <ToTop />
 
     <section id={"bio"}>
-      <div>
-        <div>
-          <StaticImage src={"../images/portrait.jpg"} alt={"Ảnh chân dung"} />
+      <div className={styles.bioWrapper}>
+        <div className={styles.profilePhotoWrapper}>
+          <StaticImage
+            className={styles.img}
+            src={"../images/portrait.jpg"}
+            alt={"Ảnh chân dung"}
+          />
         </div>
-        <div>
-          <p>Xin chào! Tôi là Dương Hà Nhi.</p>
+        <div className={styles.bioContentWrapper}>
+          <h2>Xin chào! Mình là Dương Hà&nbsp;Nhi.</h2>
           <p>
-            Làm nghề giáo viên hóa học phổ thông, niềm đam mê của tôi là bồi
+            Làm nghề giáo viên hóa học phổ thông, niềm đam mê của mình là bồi
             dưỡng và học tập cùng các bạn trẻ. Bên cạnh việc truyền đạt kiến
-            thức phổ thông, mục tiêu của tôi còn là làm lớp học trở nên thú vị,
-            vui vẻ và thực tiễn để tạo nên một môi trường tối ưu cho học sinh
-            phát triển tiềm năng của mình khi còn trên ghế nhà trường.
+            thức, mục tiêu của mình còn là làm lớp học trở nên thú vị, vui vẻ và
+            thực tiễn để tạo nên một môi trường tối ưu cho học sinh phát triển
+            tiềm năng của mình khi còn trên ghế nhà trường.
           </p>
         </div>
       </div>

@@ -19,6 +19,7 @@ import Seo from "../../components/seo";
 import Layout from "../../components/layout";
 import LangSwitch from "../../components/langSwitch";
 import ToTop from "../../components/toTop";
+import * as styles from "../index.module.css";
 
 const IndexPageEN = () => (
   <Layout lang={"en"}>
@@ -27,15 +28,16 @@ const IndexPageEN = () => (
     <ToTop />
 
     <section id={"bio"}>
-      <div>
-        <div>
+      <div className={styles.bioWrapper}>
+        <div className={styles.profilePhotoWrapper}>
           <StaticImage
+            className={styles.img}
             src={"../../images/portrait.jpg"}
             alt={"Portrait photo"}
           />
         </div>
-        <div>
-          <p>Hello! My name is Dương Hà Nhi.</p>
+        <div className={styles.bioContentWrapper}>
+          <h2>Hello! My name is Dương Hà&nbsp;Nhi.</h2>
           <p>
             I am an enthusiastic secondary and high school chemistry teacher
             from Hanoi. My passion is working with young people and contributing
