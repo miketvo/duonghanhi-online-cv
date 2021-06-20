@@ -262,9 +262,9 @@
   padding: 60px;
   color: var(--black);
   background-color: var(--complementary-yellow);
-  -webkit-box-shadow: 3px 3px 6px 0 var(--shadow-black);
-  -o-box-shadow: 3px 3px 6px 0 var(--shadow-black);
-  box-shadow: 3px 3px 6px 0 var(--shadow-black);
+  -webkit-box-shadow: 3px -3px 6px 0 var(--shadow-black);
+  -o-box-shadow: 3px -3px 6px 0 var(--shadow-black);
+  box-shadow: 3px -3px 6px 0 var(--shadow-black);
 }
 
 .contact-wrapper p {
