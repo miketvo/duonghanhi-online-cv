@@ -24,6 +24,7 @@
   -webkit-align-items: center;
   align-items: center;
   height: 100vh;
+  overflow: hidden;
 }
 
 .titleWrapper {
@@ -56,4 +57,10 @@
 .subtitle:hover,
 .subtitle:focus {
   transform: rotateY(15deg);
+}
+
+@media only screen and (--viewport-phone) {
+  .titleWrapper {
+    margin: 20vh 0;
+  }
 }
