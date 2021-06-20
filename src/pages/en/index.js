@@ -160,38 +160,39 @@ const IndexPageEN = () => (
 
     <section id={"skills"}>
       <div className={indexStyles.skillsWrapper}>
-        <div>
+        <div className={indexStyles.skill}>
           <h2>English</h2>
-          <div>
-            <span>IELTS 6.0</span>
+          <div className={indexStyles.skillsBarWrapper}>
+            <span className={indexStyles.skillsBar} style={{ width: "60%" }} />
+            <span className={indexStyles.skillsBarCaption}>IELTS 6.0</span>
           </div>
         </div>
 
-        <div>
-          <h2>Office Information Technology</h2>
-          <div>
-            <span />
+        <div className={indexStyles.skill}>
+          <h2>Office I.T.</h2>
+          <div className={indexStyles.skillsBarWrapper}>
+            <span className={indexStyles.skillsBar} style={{ width: "75%" }} />
           </div>
         </div>
 
-        <div>
+        <div className={indexStyles.skill}>
           <h2>Video Editing</h2>
-          <div>
-            <span />
+          <div className={indexStyles.skillsBarWrapper}>
+            <span className={indexStyles.skillsBar} style={{ width: "55%" }} />
           </div>
         </div>
 
-        <div>
-          <h2>Photo Design</h2>
-          <div>
-            <span />
+        <div className={indexStyles.skill}>
+          <h2>Graphic Design</h2>
+          <div className={indexStyles.skillsBarWrapper}>
+            <span className={indexStyles.skillsBar} style={{ width: "82%" }} />
           </div>
         </div>
 
-        <div>
+        <div className={indexStyles.skill}>
           <h2>Teamwork</h2>
-          <div>
-            <span />
+          <div className={indexStyles.skillsBarWrapper}>
+            <span className={indexStyles.skillsBar} style={{ width: "92%" }} />
           </div>
         </div>
       </div>
