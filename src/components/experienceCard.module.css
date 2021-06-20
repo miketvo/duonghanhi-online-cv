@@ -61,8 +61,8 @@
   max-height: 60%;
 }
 
-.wrapper .photo:hover,
-.wrapper .photo:focus {
+.wrapper:hover .photo,
+.wrapper:focus .photo {
   opacity: 0;
   transform: translateY(-100px) rotate(-10deg);
 }
