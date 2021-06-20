@@ -185,7 +185,7 @@ const IndexPageVI = () => (
       </div>
     </section>
 
-    <section id={"contact"}>
+    <section id={"contact"} className={indexStyles.contactSection}>
       <div className={indexStyles.contactWrapper}>
         <div>
           <img src={"/icon_phone.svg"} alt={"Điện thoại"} />
