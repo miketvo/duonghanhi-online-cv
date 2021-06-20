@@ -20,6 +20,7 @@
   --nav-font: "Doodly", sans-serif;
 
   /* Colors */
+  --transparent: rgba(0, 0, 0, 0);
   --black: #000;
   --shadow-black: rgba(0, 0, 0, 0.3);
   --deep-shadow-black: rgba(0, 0, 0, 0.9);
