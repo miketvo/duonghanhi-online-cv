@@ -187,26 +187,26 @@ const IndexPageEN = () => (
       </div>
     </section>
 
-    <section id={"contact"}>
-      <div>
+    <section id={"contact"} className={indexStyles.contactSection}>
+      <div className={indexStyles.contactWrapper}>
         <div>
-          <div>Phone Icon here</div>
+          <img src={"/icon_phone.svg"} alt={"Phone"} />
           <p>0967931999</p>
         </div>
 
         <div>
-          <div>Email Icon here</div>
+          <img src={"/icon_email.svg"} alt={"Email"} />
           <p>nhidg25@gmail.com</p>
         </div>
 
         <div>
-          <div>Facebook Icon here</div>
+          <img src={"/icon_facebook.svg"} alt={"Facebook"} />
           <p>facebook.com/dg.hnhi</p>
         </div>
 
         <div>
-          <div>Map Icon here</div>
-          <p>371 Vĩnh Hưng st., Hoàng Mai District - Hanoi</p>
+          <img src={"/icon_map.svg"} alt={"Address"} />
+          <p>371 Vĩnh&nbsp;Hưng st., Hoàng&nbsp;Mai District - Hanoi</p>
         </div>
       </div>
     </section>

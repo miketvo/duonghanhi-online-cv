@@ -22,6 +22,7 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 
 import Header from "./header";
 import MobileHamburgerMenu from "./mobileHamburgerMenu";
@@ -29,7 +30,7 @@ import "../styles/reset.css";
 import "../styles/accessibility.css";
 import "../styles/global.module.css";
 import "../fonts/fonts.css";
-import "./layout.module.css";
+import * as styles from "./layout.module.css";
 
 const Layout = ({ lang, children }) => {
   const data = useStaticQuery(graphql`
@@ -86,10 +87,14 @@ const Layout = ({ lang, children }) => {
       />
       <MobileHamburgerMenu lang={lang} navLinks={navLinks} />
       <main>{children}</main>
+      <div className={styles.footerBackground} />
       <footer>
-        COPYRIGHT DƯƠNG HÀ NHI ©{new Date().getFullYear()} | WEBSITE BY
-        {` `}
-        <a href="https://miketvo.com">MIKETVO.COM</a>
+        <div>
+          COPYRIGHT DƯƠNG&nbsp;HÀ&nbsp;NHI ©{new Date().getFullYear()} |
+          WEBSITE&nbsp;BY
+          {` `}
+          <a href="https://miketvo.com">MIKETVO.COM</a>
+        </div>
       </footer>
     </>
   );

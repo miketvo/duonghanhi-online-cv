@@ -186,25 +186,25 @@ const IndexPageVI = () => (
     </section>
 
     <section id={"contact"}>
-      <div>
+      <div className={indexStyles.contactWrapper}>
         <div>
-          <div>Phone Icon here</div>
+          <img src={"/icon_phone.svg"} alt={"Điện thoại"} />
           <p>0967931999</p>
         </div>
 
         <div>
-          <div>Email Icon here</div>
+          <img src={"/icon_email.svg"} alt={"Email"} />
           <p>nhidg25@gmail.com</p>
         </div>
 
         <div>
-          <div>Facebook Icon here</div>
+          <img src={"/icon_facebook.svg"} alt={"Facebook"} />
           <p>facebook.com/dg.hnhi</p>
         </div>
 
         <div>
-          <div>Map Icon here</div>
-          <p>371 phố Vĩnh Hưng, Hoàng Mai - Hà Nội</p>
+          <img src={"/icon_map.svg"} alt={"Địa chỉ"} />
+          <p>371 phố Vĩnh&nbsp;Hưng, Hoàng&nbsp;Mai - Hà&nbsp;Nội</p>
         </div>
       </div>
     </section>
