@@ -44,8 +44,8 @@ if (stickyNav) {
         parseInt(stickyNavStyles.marginBottom);
       for (let index = 0; index < stickyNavChildren.length - 1; index++) {
         if (
-          sectionPositions[index] - offsetY < window.scrollY &&
-          window.scrollY < sectionPositions[index + 1] - offsetY
+          sectionPositions[index] - offsetY <= window.scrollY &&
+          window.scrollY <= sectionPositions[index + 1] - offsetY
         ) {
           stickyNavChildren[index].firstChild.classList.add("active");
         } else {

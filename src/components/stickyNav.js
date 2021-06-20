@@ -39,7 +39,7 @@ const StickyNav = ({ navLinks }) => (
 );
 
 StickyNav.propTypes = {
-  navLinks: PropTypes.node.isRequired,
+  navLinks: PropTypes.any.isRequired,
 };
 
 export default StickyNav;

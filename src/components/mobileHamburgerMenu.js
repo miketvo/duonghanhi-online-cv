@@ -17,40 +17,77 @@ import PropTypes from "prop-types";
 import scrollTo from "gatsby-plugin-smoothscroll";
 import LangMenu from "./langMenu";
 
-const MobileHamburgerMenu = ({ lang, navLinks }) => (
-  <div id={"mobile-hamburger-menu"}>
-    <LangMenu lang={lang} />
-    <ul>
-      {navLinks.map(link => (
-        <li key={link.link}>
-          <button
-            name={link.link}
-            onClick={event => {
-              scrollTo(link.link);
-              event.preventDefault();
-            }}
-          >
-            {link.name}
-          </button>
-        </li>
-      ))}
-    </ul>
-    <button
-      onClick={function () {
-        scrollTo("#top");
-      }}
-    >
-      Back to Top
-    </button>
-  </div>
-);
+import * as styles from "./mobileHamburgerMenu.module.css";
 
-LangMenu.propTypes = {
-  lang: PropTypes.string,
-  navLinks: PropTypes.node.isRequired,
+const MobileHamburgerMenu = ({ lang, navLinks }) => {
+  let backToTopMsg;
+  switch (lang) {
+    case "vi":
+      backToTopMsg = "Đầu trang";
+      break;
+    case "en":
+      backToTopMsg = "To Top";
+      break;
+    default:
+      backToTopMsg = "";
+  }
+
+  return (
+    <>
+      <div className={styles.toggleButtonWrapper}>
+        <button id={"mobile-hamburger-menu-button"}>
+          <div />
+          <div />
+          <div />
+        </button>
+      </div>
+      <div id={"mobile-hamburger-menu"} className={styles.menu}>
+        <div>
+          <LangMenu lang={lang} />
+          <ul
+            id={"mobile-hamburger-menu-main-menu"}
+            className={styles.mainMenu}
+          >
+            <li>
+              <button
+                onClick={function () {
+                  scrollTo("#top");
+                }}
+              >
+                <img
+                  className={styles.icon}
+                  src="/to_top_arrow_light.svg"
+                  alt=""
+                />
+                {backToTopMsg}
+              </button>
+            </li>
+            {navLinks.map(link => (
+              <li key={link.link}>
+                <button
+                  name={link.link}
+                  onClick={event => {
+                    scrollTo(link.link);
+                    event.preventDefault();
+                  }}
+                >
+                  {link.name}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </>
+  );
 };
 
-LangMenu.defaultProps = {
+MobileHamburgerMenu.propTypes = {
+  lang: PropTypes.string,
+  navLinks: PropTypes.any.isRequired,
+};
+
+MobileHamburgerMenu.defaultProps = {
   lang: ``,
 };
 

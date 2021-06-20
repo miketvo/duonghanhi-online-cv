@@ -75,6 +75,11 @@ function Seo({ description, lang, meta, title }) {
         type={"text/javascript"}
         defer
       />
+      <script
+        src={withPrefix("js/mobileHamburgerMenuClientLogic.js")}
+        type={"text/javascript"}
+        defer
+      />
     </Helmet>
   );
 }

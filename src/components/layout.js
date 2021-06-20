@@ -24,12 +24,12 @@ import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 
 import Header from "./header";
+import MobileHamburgerMenu from "./mobileHamburgerMenu";
 import "../styles/reset.css";
 import "../styles/accessibility.css";
 import "../styles/global.module.css";
 import "../fonts/fonts.css";
 import "./layout.module.css";
-import MobileHamburgerMenu from "./mobileHamburgerMenu";
 
 const Layout = ({ lang, children }) => {
   const data = useStaticQuery(graphql`
