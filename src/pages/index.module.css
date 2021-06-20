@@ -1,0 +1,427 @@
+/*
+ * Copyright (c) 2021 Mike Vo (info@miketvo.com) - All Rights Reserved.
+ *
+ * This file is part of the project "duonghanhi-online-cv".
+ *
+ * This project is an online curriculum vitae authored by Mike Vo - hereby
+ * referred to as "the author" - for Ms. Duong Ha Nhi - hereby referred to as
+ * "the client".
+ *
+ * COPYING AND/OR DISTRIBUTING OF ANY CONTENT WITHIN THIS PROJECT WITHOUT EX-
+ * PRESS PERMISSION FROM THE CLIENT AND/OR THE AUTHOR, VIA ANY MEDIUM IS
+ * STRICTLY PROHIBITED.
+ */
+
+
+/****************************************************/
+/* BIO SECTION */
+
+.bio-wrapper {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  padding: 200px 0;
+}
+
+.profile-photo-wrapper {
+  background: var(--complementary-yellow);
+  padding: 50px;
+  -webkit-box-shadow: 3px 3px 6px 0 var(--shadow-black);
+  -o-box-shadow: 3px 3px 6px 0 var(--shadow-black);
+  box-shadow: 3px 3px 6px 0 var(--shadow-black);
+  flex: 0 0 480px;
+  height: 480px;
+}
+
+.profile-photo-wrapper .photo {
+  -webkit-box-shadow: 0 0 6px 0 var(--shadow-black);
+  -o-box-shadow: 0 0 6px 0 var(--shadow-black);
+  box-shadow: 0 0 6px 0 var(--shadow-black);
+}
+
+.bio-content-wrapper {
+  padding: 0 0 0 50px;
+}
+
+.bio-content-wrapper h2 {
+  font-family: var(--header-font);
+  padding-bottom: 2.5rem;
+  line-height: 2.5rem;
+}
+
+.bio-content-wrapper p {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  text-align: justify;
+}
+
+/* Responsive */
+@media only screen and (--viewport-wide) {
+  .bio-wrapper {
+    padding: 200px 15%;
+  }
+}
+@media only screen and (--viewport-regular) {
+  .bio-content-wrapper p {
+    line-height: 2rem;
+    text-align: justify;
+  }
+}
+@media only screen and (--viewport-narrow) {
+  .bio-content-wrapper {
+    padding: 100px 8% 0 8%;
+    text-align: -webkit-center;
+    text-align: -moz-center;
+    text-align: center;
+  }
+
+  .bio-content-wrapper h2 {
+    font-family: var(--header-font);
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .bio-content-wrapper p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-align: inherit;
+  }
+
+  .bio-wrapper {
+    flex-direction: column;
+  }
+
+  .profile-photo-wrapper {
+    max-width: 480px;
+    max-height: 480px;
+  }
+}
+@media only screen and (--viewport-phone) {
+  .profile-photo-wrapper {
+    padding: 30px;
+    flex: 1 0;
+  }
+
+  .bio-content-wrapper h2 {
+    padding-bottom: 1rem;
+  }
+
+  .bio-content-wrapper p {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    text-align: inherit;
+  }
+
+  .bio-content-wrapper {
+    padding: 70px 10px;
+  }
+}
+
+
+/****************************************************/
+/* EDUCATION SECTION */
+
+.education-wrapper {
+  display: -moz-grid;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: 20% 10px 10px auto;
+  grid-column-gap: 18px;
+  padding: 200px 0;
+}
+
+.education-decoration {
+  position: relative;
+  left: -12px;
+  grid-column: 3;
+  width: 0.1rem;
+  min-height: 150px;
+  height: 22vh;
+  background-color: var(--white);
+}
+
+.education-entry-year {
+  grid-column: 1;
+  text-align: right;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.education-entry-year h2,
+.education-entry-description h2 {
+  font-family: var(--header-font);
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: var(--white);
+}
+
+.education-entry-description {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  grid-column: 4;
+  color: var(--secondary-pink);
+}
+
+.education-entry-description h2 {
+  font-family: var(--header-font);
+  line-height: 2rem;
+  color: var(--secondary-pink);
+}
+
+.education-entry-description p {
+  font-family: var(--secondary-font);
+  font-size: 1rem;
+}
+
+.education-entry-separator {
+  position: relative;
+  right: -12px;
+  grid-column: 2;
+  background: var(--white);
+  width: 10px;
+  height: 10px;
+  margin: auto;
+  border-radius: 10px;
+}
+
+
+/* Responsive */
+@media only screen and (--viewport-phone) {
+  .education-wrapper {
+    grid-column-gap: 6px;
+  }
+
+  .education-entry-separator {
+    right: -6px;
+  }
+
+  .education-decoration {
+    left: -6px;
+    min-height: 240px;
+    height: 32vh;
+  }
+
+  .education-entry-description p {
+    font-size: 0.8rem;
+  }
+}
+
+
+/****************************************************/
+/* EXPERIENCES SECTION */
+
+.experiences-wrapper {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 200px 0;
+}
+
+/* Responsive */
+@media only screen and (--viewport-phone) {
+  .experiences-wrapper {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+/****************************************************/
+/* SKILLS SECTION */
+
+.skills-wrapper {
+  padding: 200px 0 400px 0;
+}
+
+.skills-wrapper .skill {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--secondary-font);
+}
+
+.skills-wrapper h2 {
+  color: var(--secondary-pink);
+  font-family: var(--secondary-font);
+  margin-bottom: 0;
+  text-align: right;
+  flex: 0 0 200px;
+}
+
+.skills-bar-wrapper {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 0.12rem solid var(--white);
+  flex: 0 0 50%;
+  height: 2.5rem;
+  border-radius: 0.1rem;
+  margin: 30px;
+}
+
+.skills-bar {
+  display: none;
+  opacity: 1;
+  background: var(--transparent) repeating-linear-gradient(135deg, var(--white), var(--white) 0.12rem, var(--transparent) 0.12rem, var(--transparent) 0.6rem);
+  height: 100%;
+  width: 100%;
+  border-right: 0.12rem solid var(--white);
+  border-radius: 0.1rem 0 0 0.1rem;
+  transform-origin: left;
+}
+
+.skills-bar-1 {
+  width: 60% !important;
+}
+.skills-bar-2 {
+  width: 75% !important;
+}
+.skills-bar-3 {
+  width: 55% !important;
+}
+.skills-bar-4 {
+  width: 82% !important;
+}
+.skills-bar-5 {
+  width: 92% !important;
+}
+
+.skills-bar:hover {
+  background: var(--transparent) repeating-linear-gradient(135deg, var(--white), var(--white) 0.12rem, var(--transparent) 0.12rem, var(--transparent) 0.8rem);
+}
+
+.skills-bar-caption {
+  font-size: 1rem;
+  margin: 0 20px;
+}
+
+/* Responsive */
+@media only screen and (--viewport-phone) {
+  .skills-wrapper .skill {
+    flex-direction: column;
+  }
+
+  .skills-wrapper h2 {
+    flex: none;
+    text-align: -webkit-center;
+    text-align: -moz-center;
+    text-align: center;
+  }
+
+  .skills-bar-wrapper {
+    flex: none;
+    width: 60%;
+    margin-bottom: 100px;
+  }
+
+  .skills-bar-caption {
+    font-size: 0.7rem;
+    margin: 0 10px;
+  }
+}
+
+
+/****************************************************/
+/* CONTACT SECTION */
+
+.contact-section {
+  padding: 200px 0 0 0 !important;
+  min-width: 0 !important;
+}
+
+.contact-wrapper {
+  margin: 0 20%;
+  padding: 60px;
+  color: var(--black);
+  background-color: var(--complementary-yellow);
+  -webkit-box-shadow: 3px -3px 6px 0 var(--shadow-black);
+  -o-box-shadow: 3px -3px 6px 0 var(--shadow-black);
+  box-shadow: 3px -3px 6px 0 var(--shadow-black);
+}
+
+.contact-wrapper p {
+  font-size: 3rem;
+  line-height: 3rem;
+  margin-left: 15px;
+}
+
+.contact-wrapper div {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  min-height: 110px;
+}
+
+/* Responsive */
+@media only screen and (--viewport-narrow) {
+  .contact-wrapper {
+    margin: 0 10%;
+    padding: 45px;
+  }
+
+  .contact-wrapper p {
+    font-size: 2rem;
+    line-height: 1.8rem;
+  }
+
+  .contact-wrapper img {
+    width: 40px;
+  }
+}
+@media only screen and (--viewport-phone) {
+  .contact-wrapper {
+    margin: 0;
+    background: none;
+    -webkit-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .contact-wrapper div {
+    margin-top: 30px;
+    flex-direction: column;
+    align-items: center;
+    text-align: -webkit-center;
+    text-align: -moz-center;
+    text-align: center;
+  }
+
+  .contact-wrapper img {
+    margin-bottom: 0;
+  }
+}

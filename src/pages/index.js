@@ -19,6 +19,9 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 import LangSwitch from "../components/langSwitch";
 import ToTop from "../components/toTop";
+import ExperienceCard from "../components/experienceCard";
+import * as indexStyles from "./index.module.css";
+import * as experienceCardStyles from "../components/experienceCard.module.css";
 
 const IndexPageVI = () => (
   <Layout lang={"vi"}>
@@ -27,150 +30,222 @@ const IndexPageVI = () => (
     <ToTop />
 
     <section id={"bio"}>
-      <div>
-        <div>
-          <StaticImage src={"../images/portrait.jpg"} alt={"Ảnh chân dung"} />
+      <div className={indexStyles.bioWrapper}>
+        <div className={indexStyles.profilePhotoWrapper}>
+          <StaticImage
+            className={indexStyles.photo}
+            src={"../images/portrait.jpg"}
+            alt={"Ảnh chân dung"}
+          />
         </div>
-        <div>
-          <p>Xin chào! Tôi là Dương Hà Nhi.</p>
+        <div className={indexStyles.bioContentWrapper}>
+          <h2>Xin chào! Mình là Dương Hà&nbsp;Nhi.</h2>
           <p>
-            Làm nghề giáo viên hóa học phổ thông, niềm đam mê của tôi là bồi
+            Làm nghề giáo viên hóa học phổ thông, niềm đam mê của mình là bồi
             dưỡng và học tập cùng các bạn trẻ. Bên cạnh việc truyền đạt kiến
-            thức phổ thông, mục tiêu của tôi còn là làm lớp học trở nên thú vị,
-            vui vẻ và thực tiễn để tạo nên một môi trường tối ưu cho học sinh
-            phát triển tiềm năng của mình khi còn trên ghế nhà trường.
+            thức, mục tiêu của mình còn là làm lớp học trở nên thú vị, vui vẻ và
+            thực tiễn để tạo nên một môi trường tối ưu cho học sinh phát triển
+            tiềm năng của mình khi còn trên ghế nhà trường.
           </p>
         </div>
       </div>
     </section>
 
     <section id={"education"}>
-      <div>
-        <div>
+      <div className={indexStyles.educationWrapper}>
+        <div className={indexStyles.educationEntryYear}>
           <h2>2014</h2>
         </div>
-        <div>
-          <h2>THPT Trần Phú - Hoàn Kiếm</h2>
+        <span className={indexStyles.educationEntrySeparator} />
+        <div className={indexStyles.educationDecoration} />
+        <div className={indexStyles.educationEntryDescription}>
+          <h2>THPT Trần&nbsp;Phú - Hoàn&nbsp;Kiếm</h2>
         </div>
 
-        <div>
+        <div className={indexStyles.educationEntryYear}>
           <h2>2017</h2>
         </div>
-        <div>
-          <h2>Đại học Quốc gia Hà Nội</h2>
+        <span className={indexStyles.educationEntrySeparator} />
+        <div className={indexStyles.educationDecoration} />
+        <div className={indexStyles.educationEntryDescription}>
+          <h2>Đại học Quốc&nbsp;gia Hà&nbsp;Nội</h2>
           <p>
-            Trường Đại học Giáo dục
+            Trường Đại&nbsp;học Giáo&nbsp;dục
             <br />
-            Khoa Sư phạm Hóa học
+            Khoa Sư&nbsp;phạm Hóa&nbsp;học
           </p>
         </div>
 
-        <div>
-          <h2>2017</h2>
+        <div className={indexStyles.educationEntryYear}>
+          <h2>2020</h2>
         </div>
-        <div>
-          <h2>Đại học Quốc gia Hà Nội</h2>
+        <span className={indexStyles.educationEntrySeparator} />
+        <div className={indexStyles.educationDecoration} />
+        <div className={indexStyles.educationEntryDescription}>
+          <h2>Đại&nbsp;học Quốc&nbsp;gia Hà&nbsp;Nội</h2>
           <p>
-            Trường Đại học Ngoại ngữ
+            Trường Đại&nbsp;học Ngoại&nbsp;ngữ
             <br />
-            Ngành Biên dịch - Phiên dịch, Khoa Ngôn ngữ Anh
+            Ngành Biên&nbsp;dịch - Phiên&nbsp;dịch, Khoa Ngôn ngữ Anh
           </p>
         </div>
       </div>
     </section>
 
     <section id={"experiences"}>
-      <div>
-        <h3>2017 - 2021</h3>
-        <h2>Gia sư bộ môn Hóa học</h2>
-        <StaticImage
-          src={"../images/adam-winger-UFG04g43hqs-unsplash.jpg"}
-          alt={""}
-        />
-        <p>Hỗ trợ nhóm học sinh lấy gốc môn Hóa, ôn luyện thi Đại học.</p>
-      </div>
+      <div className={indexStyles.experiencesWrapper}>
+        <ExperienceCard rotation={-3}>
+          <h3>2017 - 2021</h3>
+          <h2>Gia sư bộ môn Hóa&nbsp;học</h2>
+          <StaticImage
+            className={experienceCardStyles.photo}
+            src={"../images/adam-winger-UFG04g43hqs-unsplash.jpg"}
+            alt={""}
+          />
+          <p>
+            Hỗ trợ nhóm học sinh lấy gốc môn Hóa, ôn luyện thi Đại&nbsp;học.
+          </p>
+        </ExperienceCard>
 
-      <div>
-        <h3>2019</h3>
-        <h2>Cuộc thi Hunarobo lần 7</h2>
-        <StaticImage src={"../images/Hunarobo.JPG"} alt={""} />
-        <p>Hỗ trợ thí sinh và ban tổ chức trong quá trình cuộc thi.</p>
-      </div>
+        <ExperienceCard rotation={1}>
+          <h3>2019</h3>
+          <h2>Cuộc thi Hunarobo lần 7</h2>
+          <StaticImage
+            className={experienceCardStyles.photo}
+            src={"../images/Hunarobo.JPG"}
+            alt={""}
+          />
+          <p>Hỗ trợ thí sinh và ban tổ chức trong quá trình cuộc thi.</p>
+        </ExperienceCard>
 
-      <div>
-        <h3>2019 - 2020</h3>
-        <h2>Công ty Cổ phần Anh ngữ Apax</h2>
-        <StaticImage src={"../images/Apax.jpg"} alt={""} />
-        <p>
-          Trợ giảng tiếng Anh, hỗ trợ giáo viên bản ngữ giảng dạy, phiên dịch
-          các cuộc họp giữa giáo viên và phụ huynh.
-        </p>
-      </div>
+        <ExperienceCard rotation={-1}>
+          <h3>2019 - 2020</h3>
+          <h2>Công ty Cổ&nbsp;phần Anh ngữ Apax</h2>
+          <StaticImage
+            className={experienceCardStyles.photo}
+            src={"../images/Apax.jpg"}
+            alt={""}
+          />
+          <p>
+            Trợ giảng tiếng Anh, hỗ trợ giáo viên bản ngữ giảng dạy, phiên dịch
+            các cuộc họp giữa giáo viên và phụ huynh.
+          </p>
+        </ExperienceCard>
 
-      <div>
-        <h3>2020</h3>
-        <h2>Trường THPT Khoa học Giáo dục HES - VNU</h2>
-        <StaticImage src={"../images/HES.JPG"} alt={""} />
-        <p>Thực hiện công tác kiến tập sư phạm.</p>
-      </div>
+        <ExperienceCard rotation={-2}>
+          <h3>2020</h3>
+          <h2>Trường THPT Khoa&nbsp;học Giáo&nbsp;dục HES - VNU</h2>
+          <StaticImage
+            className={experienceCardStyles.photo}
+            src={"../images/HES.JPG"}
+            alt={""}
+          />
+          <p>Thực hiện công tác kiến tập sư phạm.</p>
+        </ExperienceCard>
 
-      <div>
-        <h3>2021</h3>
-        <h2>Trường THPT Trần Phú - Hoàn Kiếm</h2>
-        <StaticImage src={"../images/TP-HK.JPG"} alt={""} />
-        <p>Thực hiện công tác thực tập sư phạm.</p>
+        <ExperienceCard rotation={2}>
+          <h3>2021</h3>
+          <h2>Trường THPT Trần&nbsp;Phú - Hoàn&nbsp;Kiếm</h2>
+          <StaticImage
+            className={experienceCardStyles.photo}
+            src={"../images/TP-HK.JPG"}
+            alt={""}
+          />
+          <p>Thực hiện công tác thực tập sư phạm.</p>
+        </ExperienceCard>
       </div>
     </section>
 
     <section id={"skills"}>
-      <div>
-        <h2>Tiếng Anh</h2>
-        <div>
-          <span>IELTS 6.0</span>
+      <div className={indexStyles.skillsWrapper}>
+        <div className={indexStyles.skill}>
+          <h2>Tiếng Anh</h2>
+          <div className={indexStyles.skillsBarWrapper}>
+            <span
+              className={[
+                indexStyles.skillsBar,
+                indexStyles.skillsBar1,
+                "skillbar",
+              ].join(" ")}
+            />
+            <span className={indexStyles.skillsBarCaption}>IELTS 6.0</span>
+          </div>
         </div>
-      </div>
 
-      <div>
-        <h2>Tin học văn phòng</h2>
-        <div></div>
-      </div>
+        <div className={indexStyles.skill}>
+          <h2>Tin&nbsp;học văn&nbsp;phòng</h2>
+          <div className={indexStyles.skillsBarWrapper}>
+            <span
+              className={[
+                indexStyles.skillsBar,
+                indexStyles.skillsBar2,
+                "skillbar",
+              ].join(" ")}
+            />
+          </div>
+        </div>
 
-      <div>
-        <h2>Edit video</h2>
-        <div></div>
-      </div>
+        <div className={indexStyles.skill}>
+          <h2>Edit video</h2>
+          <div className={indexStyles.skillsBarWrapper}>
+            <span
+              className={[
+                indexStyles.skillsBar,
+                indexStyles.skillsBar3,
+                "skillbar",
+              ].join(" ")}
+            />
+          </div>
+        </div>
 
-      <div>
-        <h2>Design ảnh</h2>
-        <div></div>
-      </div>
+        <div className={indexStyles.skill}>
+          <h2>Design ảnh</h2>
+          <div className={indexStyles.skillsBarWrapper}>
+            <span
+              className={[
+                indexStyles.skillsBar,
+                indexStyles.skillsBar4,
+                "skillbar",
+              ].join(" ")}
+            />
+          </div>
+        </div>
 
-      <div>
-        <h2>Teamwork</h2>
-        <div></div>
+        <div className={indexStyles.skill}>
+          <h2>Teamwork</h2>
+          <div className={indexStyles.skillsBarWrapper}>
+            <span
+              className={[
+                indexStyles.skillsBar,
+                indexStyles.skillsBar5,
+                "skillbar",
+              ].join(" ")}
+            />
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id={"contact"}>
-      <div>
+    <section id={"contact"} className={indexStyles.contactSection}>
+      <div className={indexStyles.contactWrapper}>
         <div>
-          <div>Phone Icon here</div>
+          <img src={"/icon_phone.svg"} alt={"Điện thoại"} />
           <p>0967931999</p>
         </div>
 
         <div>
-          <div>Email Icon here</div>
+          <img src={"/icon_email.svg"} alt={"Email"} />
           <p>nhidg25@gmail.com</p>
         </div>
 
         <div>
-          <div>Facebook Icon here</div>
+          <img src={"/icon_facebook.svg"} alt={"Facebook"} />
           <p>facebook.com/dg.hnhi</p>
         </div>
 
         <div>
-          <div>Map Icon here</div>
-          <p>371 phố Vĩnh Hưng, Hoàng Mai - Hà Nội</p>
+          <img src={"/icon_map.svg"} alt={"Địa chỉ"} />
+          <p>371 phố Vĩnh&nbsp;Hưng, Hoàng&nbsp;Mai - Hà&nbsp;Nội</p>
         </div>
       </div>
     </section>

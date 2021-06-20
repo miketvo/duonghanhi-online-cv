@@ -19,6 +19,9 @@ import Seo from "../../components/seo";
 import Layout from "../../components/layout";
 import LangSwitch from "../../components/langSwitch";
 import ToTop from "../../components/toTop";
+import ExperienceCard from "../../components/experienceCard";
+import * as indexStyles from "../index.module.css";
+import * as experienceCardStyles from "../../components/experienceCard.module.css";
 
 const IndexPageEN = () => (
   <Layout lang={"en"}>
@@ -27,15 +30,16 @@ const IndexPageEN = () => (
     <ToTop />
 
     <section id={"bio"}>
-      <div>
-        <div>
+      <div className={indexStyles.bioWrapper}>
+        <div className={indexStyles.profilePhotoWrapper}>
           <StaticImage
+            className={indexStyles.photo}
             src={"../../images/portrait.jpg"}
             alt={"Portrait photo"}
           />
         </div>
-        <div>
-          <p>Hello! My name is Dương Hà Nhi.</p>
+        <div className={indexStyles.bioContentWrapper}>
+          <h2>Hello! My name is Dương Hà&nbsp;Nhi.</h2>
           <p>
             I am an enthusiastic secondary and high school chemistry teacher
             from Hanoi. My passion is working with young people and contributing
@@ -48,18 +52,22 @@ const IndexPageEN = () => (
     </section>
 
     <section id={"education"}>
-      <div>
-        <div>
+      <div className={indexStyles.educationWrapper}>
+        <div className={indexStyles.educationEntryYear}>
           <h2>2014</h2>
         </div>
-        <div>
+        <span className={indexStyles.educationEntrySeparator} />
+        <div className={indexStyles.educationDecoration} />
+        <div className={indexStyles.educationEntryDescription}>
           <h2>Trần Phú - Hoàn Kiếm Highschool</h2>
         </div>
 
-        <div>
+        <div className={indexStyles.educationEntryYear}>
           <h2>2017</h2>
         </div>
-        <div>
+        <span className={indexStyles.educationEntrySeparator} />
+        <div className={indexStyles.educationDecoration} />
+        <div className={indexStyles.educationEntryDescription}>
           <h2>Vietnam National University, Hanoi</h2>
           <p>
             University of Education
@@ -68,10 +76,12 @@ const IndexPageEN = () => (
           </p>
         </div>
 
-        <div>
-          <h2>2017</h2>
+        <div className={indexStyles.educationEntryYear}>
+          <h2>2020</h2>
         </div>
-        <div>
+        <span className={indexStyles.educationEntrySeparator} />
+        <div className={indexStyles.educationDecoration} />
+        <div className={indexStyles.educationEntryDescription}>
           <h2>Vietnam National University, Hanoi</h2>
           <p>
             University of Languages and International Studies
@@ -83,100 +93,161 @@ const IndexPageEN = () => (
     </section>
 
     <section id={"experiences"}>
-      <div>
-        <h3>2017 - 2021</h3>
-        <h2>Chemistry Tutor</h2>
-        <StaticImage
-          src={"../../images/adam-winger-UFG04g43hqs-unsplash.jpg"}
-          alt={""}
-        />
-        <p>
-          Tutoring students in Chemistry for their Vietnamese university
-          entrance exam.
-        </p>
-      </div>
+      <div className={indexStyles.experiencesWrapper}>
+        <ExperienceCard rotation={-3}>
+          <h3>2017 - 2021</h3>
+          <h2>Chemistry Tutor</h2>
+          <StaticImage
+            className={experienceCardStyles.photo}
+            src={"../../images/adam-winger-UFG04g43hqs-unsplash.jpg"}
+            alt={""}
+          />
+          <p>
+            Tutoring students in Chemistry for their Vietnamese university
+            entrance exam.
+          </p>
+        </ExperienceCard>
 
-      <div>
-        <h3>2019</h3>
-        <h2>Hunarobo Contest 7</h2>
-        <StaticImage src={"../../images/Hunarobo.JPG"} alt={""} />
-        <p>Assisting in organisational logistics and contestants support.</p>
-      </div>
+        <ExperienceCard rotation={1}>
+          <h3>2019</h3>
+          <h2>Hunarobo Contest 7</h2>
+          <StaticImage
+            className={experienceCardStyles.photo}
+            src={"../../images/Hunarobo.JPG"}
+            alt={""}
+          />
+          <p>Assisting in organisational logistics and contestants support.</p>
+        </ExperienceCard>
 
-      <div>
-        <h3>2019 - 2020</h3>
-        <h2>Apax English</h2>
-        <StaticImage src={"../../images/Apax.jpg"} alt={""} />
-        <p>
-          English teaching assistant for native and non-native teaching staffs,
-          bilingual English-Vietnamese interpretation for parent meetings.
-        </p>
-      </div>
+        <ExperienceCard rotation={-1}>
+          <h3>2019 - 2020</h3>
+          <h2>Apax English</h2>
+          <StaticImage
+            className={experienceCardStyles.photo}
+            src={"../../images/Apax.jpg"}
+            alt={""}
+          />
+          <p>
+            English teaching assistant for native and non-native teaching
+            staffs, bilingual English-Vietnamese interpretation for parent
+            meetings.
+          </p>
+        </ExperienceCard>
 
-      <div>
-        <h3>2020</h3>
-        <h2>HES - VNU Highschool of Education Science</h2>
-        <StaticImage src={"../../images/HES.JPG"} alt={""} />
-        <p>Practicing in Pedagogy.</p>
-      </div>
+        <ExperienceCard rotation={-2}>
+          <h3>2020</h3>
+          <h2>HES - VNU Highschool of Education Science</h2>
+          <StaticImage
+            className={experienceCardStyles.photo}
+            src={"../../images/HES.JPG"}
+            alt={""}
+          />
+          <p>Practicing in Pedagogy.</p>
+        </ExperienceCard>
 
-      <div>
-        <h3>2021</h3>
-        <h2>Trần Phú - Hoàn Kiếm Highschool</h2>
-        <StaticImage src={"../../images/TP-HK.JPG"} alt={""} />
-        <p>Professional training in Pedagogy.</p>
+        <ExperienceCard rotation={2}>
+          <h3>2021</h3>
+          <h2>Trần Phú - Hoàn Kiếm Highschool</h2>
+          <StaticImage
+            className={experienceCardStyles.photo}
+            src={"../../images/TP-HK.JPG"}
+            alt={""}
+          />
+          <p>Professional training in Pedagogy.</p>
+        </ExperienceCard>
       </div>
     </section>
 
     <section id={"skills"}>
-      <div>
-        <h2>English</h2>
-        <div>
-          <span>IELTS 6.0</span>
+      <div className={indexStyles.skillsWrapper}>
+        <div className={indexStyles.skill}>
+          <h2>English</h2>
+          <div className={indexStyles.skillsBarWrapper}>
+            <span
+              className={[
+                indexStyles.skillsBar,
+                indexStyles.skillsBar1,
+                "skillbar",
+              ].join(" ")}
+            />
+            <span className={indexStyles.skillsBarCaption}>IELTS 6.0</span>
+          </div>
         </div>
-      </div>
 
-      <div>
-        <h2>Office Information Technology</h2>
-        <div></div>
-      </div>
+        <div className={indexStyles.skill}>
+          <h2>Office I.T.</h2>
+          <div className={indexStyles.skillsBarWrapper}>
+            <span
+              className={[
+                indexStyles.skillsBar,
+                indexStyles.skillsBar2,
+                "skillbar",
+              ].join(" ")}
+            />
+          </div>
+        </div>
 
-      <div>
-        <h2>Video Editing</h2>
-        <div></div>
-      </div>
+        <div className={indexStyles.skill}>
+          <h2>Video Editing</h2>
+          <div className={indexStyles.skillsBarWrapper}>
+            <span
+              className={[
+                indexStyles.skillsBar,
+                indexStyles.skillsBar3,
+                "skillbar",
+              ].join(" ")}
+            />
+          </div>
+        </div>
 
-      <div>
-        <h2>Photo Design</h2>
-        <div></div>
-      </div>
+        <div className={indexStyles.skill}>
+          <h2>Graphic Design</h2>
+          <div className={indexStyles.skillsBarWrapper}>
+            <span
+              className={[
+                indexStyles.skillsBar,
+                indexStyles.skillsBar4,
+                "skillbar",
+              ].join(" ")}
+            />
+          </div>
+        </div>
 
-      <div>
-        <h2>Teamwork</h2>
-        <div></div>
+        <div className={indexStyles.skill}>
+          <h2>Teamwork</h2>
+          <div className={indexStyles.skillsBarWrapper}>
+            <span
+              className={[
+                indexStyles.skillsBar,
+                indexStyles.skillsBar5,
+                "skillbar",
+              ].join(" ")}
+            />
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id={"contact"}>
-      <div>
+    <section id={"contact"} className={indexStyles.contactSection}>
+      <div className={indexStyles.contactWrapper}>
         <div>
-          <div>Phone Icon here</div>
+          <img src={"/icon_phone.svg"} alt={"Phone"} />
           <p>0967931999</p>
         </div>
 
         <div>
-          <div>Email Icon here</div>
+          <img src={"/icon_email.svg"} alt={"Email"} />
           <p>nhidg25@gmail.com</p>
         </div>
 
         <div>
-          <div>Facebook Icon here</div>
+          <img src={"/icon_facebook.svg"} alt={"Facebook"} />
           <p>facebook.com/dg.hnhi</p>
         </div>
 
         <div>
-          <div>Map Icon here</div>
-          <p>371 Vĩnh Hưng st., Hoàng Mai District - Hanoi</p>
+          <img src={"/icon_map.svg"} alt={"Address"} />
+          <p>371 Vĩnh&nbsp;Hưng st., Hoàng&nbsp;Mai District - Hanoi</p>
         </div>
       </div>
     </section>

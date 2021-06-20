@@ -80,6 +80,11 @@ function Seo({ description, lang, meta, title }) {
         type={"text/javascript"}
         defer
       />
+      <script
+        src={withPrefix("js/skillsSectionClientLogic.js")}
+        type={"text/javascript"}
+        defer
+      />
     </Helmet>
   );
 }

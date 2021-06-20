@@ -19,6 +19,7 @@ body {
   background-position: 0 0;
   background-attachment: fixed;
   font-family: var(--primary-font) !important;
+  overflow-x: hidden;
 }
 
 a {
@@ -33,8 +34,46 @@ section {
   min-height: 100vh;
 }
 
+.footer-background {
+  background-color: var(--primary-green);
+  background-image: url("../images/corkboard.jpg");
+  background-size: cover;
+  background-position: 0 0;
+  position: relative;
+  bottom: -10px;
+  width: 100%;
+  height: 1000px;
+  margin-top: -900px;
+  z-index: -1;
+  overflow: hidden;
+  -webkit-box-shadow: 3px -3px 6px 0 var(--shadow-black);
+  -o-box-shadow: 3px -3px 6px 0 var(--shadow-black);
+  box-shadow: 3px -3px 6px 0 var(--shadow-black);
+}
+
 footer {
-  padding: 0 20px 100px 20px;
+  color: var(--white);
+  background-color: var(--black);
+  font-family: var(--header-font);
+  font-size: 0.8rem;
+  text-align: -webkit-center;
+  text-align: -moz-center;
+  text-align: center;
+  padding: 50px 20px 100px 20px;
+}
+
+footer div {
+  opacity: 0.1;
+}
+
+footer a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+footer a:hover,
+footer a:focus {
+  text-decoration: underline;
 }
 
 @media only screen and (--viewport-phone) {
@@ -44,10 +83,19 @@ footer {
     background-position: center;
     background-attachment: fixed;
   }
-}
 
-@media only screen and (--viewport-phone) {
   main {
-    margin: 0 40px;
+    margin: 0 20px;
+  }
+
+  .footer-background {
+    padding: 60px;
+    color: var(--black);
+    background-color: var(--complementary-yellow);
+    background-image: none;
+  }
+
+  footer {
+    font-size: 0.5rem;
   }
 }
