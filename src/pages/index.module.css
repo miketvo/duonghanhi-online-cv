@@ -35,7 +35,7 @@
   height: 480px;
 }
 
-.profile-photo-wrapper .img {
+.profile-photo-wrapper .photo {
   -webkit-box-shadow: 0 0 6px 0 var(--shadow-black);
   -o-box-shadow: 0 0 6px 0 var(--shadow-black);
   box-shadow: 0 0 6px 0 var(--shadow-black);

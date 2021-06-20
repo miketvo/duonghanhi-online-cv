@@ -31,7 +31,7 @@ const IndexPageEN = () => (
       <div className={styles.bioWrapper}>
         <div className={styles.profilePhotoWrapper}>
           <StaticImage
-            className={styles.img}
+            className={styles.photo}
             src={"../../images/portrait.jpg"}
             alt={"Portrait photo"}
           />
