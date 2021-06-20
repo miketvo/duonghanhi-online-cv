@@ -14,6 +14,7 @@
 
 import * as React from "react";
 import scrollTo from "gatsby-plugin-smoothscroll";
+import PropTypes from "prop-types";
 
 import * as styles from "./stickyNav.module.css";
 
@@ -36,5 +37,9 @@ const StickyNav = ({ navLinks }) => (
     </ul>
   </nav>
 );
+
+StickyNav.propTypes = {
+  navLinks: PropTypes.any.isRequired,
+};
 
 export default StickyNav;

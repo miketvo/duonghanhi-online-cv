@@ -13,9 +13,41 @@
  */
 
 body {
+  background-color: var(--primary-green);
+  background-image: url("../images/bg.jpg");
+  background-size: cover;
+  background-position: 0 0;
+  background-attachment: fixed;
   font-family: var(--primary-font) !important;
+}
+
+a {
+  color: #d9a9ac;
+}
+
+main {
+  margin: 0 120px;
 }
 
 section {
   min-height: 100vh;
+}
+
+footer {
+  padding: 0 20px 100px 20px;
+}
+
+@media only screen and (--viewport-phone) {
+  body {
+    background-image: url("../images/bg_phone.jpg");
+    background-size: 1200px 1800px;
+    background-position: center;
+    background-attachment: fixed;
+  }
+}
+
+@media only screen and (--viewport-phone) {
+  main {
+    margin: 0 40px;
+  }
 }

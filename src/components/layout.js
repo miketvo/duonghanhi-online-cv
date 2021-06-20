@@ -24,6 +24,7 @@ import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 
 import Header from "./header";
+import MobileHamburgerMenu from "./mobileHamburgerMenu";
 import "../styles/reset.css";
 import "../styles/accessibility.css";
 import "../styles/global.module.css";
@@ -83,6 +84,7 @@ const Layout = ({ lang, children }) => {
         description={headerDesc}
         navLinks={navLinks}
       />
+      <MobileHamburgerMenu lang={lang} navLinks={navLinks} />
       <main>{children}</main>
       <footer>
         COPYRIGHT DƯƠNG HÀ NHI ©{new Date().getFullYear()} | WEBSITE BY

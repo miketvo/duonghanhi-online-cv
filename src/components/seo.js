@@ -76,7 +76,7 @@ function Seo({ description, lang, meta, title }) {
         defer
       />
       <script
-        src={withPrefix("js/auxiliaryNavClientLogic.js")}
+        src={withPrefix("js/mobileHamburgerMenuClientLogic.js")}
         type={"text/javascript"}
         defer
       />

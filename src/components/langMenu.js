@@ -34,7 +34,7 @@ const LangMenu = ({ lang }) => {
     <ul className={style.langMenu}>
       <li>
         <a className={[classNames["vi"], style.link].join(" ")} href="/">
-          Tiếng Việt
+          Tiếng&nbsp;Việt
         </a>
       </li>
       <li>
