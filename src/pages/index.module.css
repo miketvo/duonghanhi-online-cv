@@ -283,7 +283,7 @@
   display: -o-flex;
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: space-between;
   border: 0.12rem solid var(--white);
   flex: 0 0 50%;
   height: 2.5rem;
@@ -292,17 +292,39 @@
 }
 
 .skills-bar {
+  display: none;
   opacity: 1;
   background: var(--transparent) repeating-linear-gradient(135deg, var(--white), var(--white) 0.12rem, var(--transparent) 0.12rem, var(--transparent) 0.6rem);
   height: 100%;
   width: 100%;
   border-right: 0.12rem solid var(--white);
   border-radius: 0.1rem 0 0 0.1rem;
+  transform-origin: left;
+}
+
+.skills-bar-1 {
+  width: 60% !important;
+}
+.skills-bar-2 {
+  width: 75% !important;
+}
+.skills-bar-3 {
+  width: 55% !important;
+}
+.skills-bar-4 {
+  width: 82% !important;
+}
+.skills-bar-5 {
+  width: 92% !important;
+}
+
+.skills-bar:hover {
+  background: var(--transparent) repeating-linear-gradient(135deg, var(--white), var(--white) 0.12rem, var(--transparent) 0.12rem, var(--transparent) 0.8rem);
 }
 
 .skills-bar-caption {
   font-size: 1rem;
-  margin-left: 20px;
+  margin: 0 20px;
 }
 
 /* Responsive */
@@ -326,7 +348,7 @@
 
   .skills-bar-caption {
     font-size: 0.7rem;
-    margin-left: 10px;
+    margin: 0 10px;
   }
 }
 

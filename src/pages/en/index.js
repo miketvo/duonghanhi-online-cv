@@ -163,7 +163,13 @@ const IndexPageEN = () => (
         <div className={indexStyles.skill}>
           <h2>English</h2>
           <div className={indexStyles.skillsBarWrapper}>
-            <span className={indexStyles.skillsBar} style={{ width: "60%" }} />
+            <span
+              className={[
+                indexStyles.skillsBar,
+                indexStyles.skillsBar1,
+                "skillbar",
+              ].join(" ")}
+            />
             <span className={indexStyles.skillsBarCaption}>IELTS 6.0</span>
           </div>
         </div>
@@ -171,28 +177,52 @@ const IndexPageEN = () => (
         <div className={indexStyles.skill}>
           <h2>Office I.T.</h2>
           <div className={indexStyles.skillsBarWrapper}>
-            <span className={indexStyles.skillsBar} style={{ width: "75%" }} />
+            <span
+              className={[
+                indexStyles.skillsBar,
+                indexStyles.skillsBar2,
+                "skillbar",
+              ].join(" ")}
+            />
           </div>
         </div>
 
         <div className={indexStyles.skill}>
           <h2>Video Editing</h2>
           <div className={indexStyles.skillsBarWrapper}>
-            <span className={indexStyles.skillsBar} style={{ width: "55%" }} />
+            <span
+              className={[
+                indexStyles.skillsBar,
+                indexStyles.skillsBar3,
+                "skillbar",
+              ].join(" ")}
+            />
           </div>
         </div>
 
         <div className={indexStyles.skill}>
           <h2>Graphic Design</h2>
           <div className={indexStyles.skillsBarWrapper}>
-            <span className={indexStyles.skillsBar} style={{ width: "82%" }} />
+            <span
+              className={[
+                indexStyles.skillsBar,
+                indexStyles.skillsBar4,
+                "skillbar",
+              ].join(" ")}
+            />
           </div>
         </div>
 
         <div className={indexStyles.skill}>
           <h2>Teamwork</h2>
           <div className={indexStyles.skillsBarWrapper}>
-            <span className={indexStyles.skillsBar} style={{ width: "92%" }} />
+            <span
+              className={[
+                indexStyles.skillsBar,
+                indexStyles.skillsBar5,
+                "skillbar",
+              ].join(" ")}
+            />
           </div>
         </div>
       </div>
