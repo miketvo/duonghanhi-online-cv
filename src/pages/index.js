@@ -19,7 +19,9 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 import LangSwitch from "../components/langSwitch";
 import ToTop from "../components/toTop";
-import * as styles from "./index.module.css";
+import ExperienceCard from "../components/experienceCard";
+import * as indexStyles from "./index.module.css";
+import * as experienceCardStyles from "../components/experienceCard.module.css";
 
 const IndexPageVI = () => (
   <Layout lang={"vi"}>
@@ -28,15 +30,15 @@ const IndexPageVI = () => (
     <ToTop />
 
     <section id={"bio"}>
-      <div className={styles.bioWrapper}>
-        <div className={styles.profilePhotoWrapper}>
+      <div className={indexStyles.bioWrapper}>
+        <div className={indexStyles.profilePhotoWrapper}>
           <StaticImage
-            className={styles.photo}
+            className={indexStyles.photo}
             src={"../images/portrait.jpg"}
             alt={"Ảnh chân dung"}
           />
         </div>
-        <div className={styles.bioContentWrapper}>
+        <div className={indexStyles.bioContentWrapper}>
           <h2>Xin chào! Mình là Dương Hà&nbsp;Nhi.</h2>
           <p>
             Làm nghề giáo viên hóa học phổ thông, niềm đam mê của mình là bồi
@@ -50,22 +52,22 @@ const IndexPageVI = () => (
     </section>
 
     <section id={"education"}>
-      <div className={styles.educationWrapper}>
-        <div className={styles.educationEntryYear}>
+      <div className={indexStyles.educationWrapper}>
+        <div className={indexStyles.educationEntryYear}>
           <h2>2014</h2>
         </div>
-        <span className={styles.educationEntrySeparator} />
-        <div className={styles.educationDecoration} />
-        <div className={styles.educationEntryDescription}>
+        <span className={indexStyles.educationEntrySeparator} />
+        <div className={indexStyles.educationDecoration} />
+        <div className={indexStyles.educationEntryDescription}>
           <h2>THPT Trần&nbsp;Phú - Hoàn&nbsp;Kiếm</h2>
         </div>
 
-        <div className={styles.educationEntryYear}>
+        <div className={indexStyles.educationEntryYear}>
           <h2>2017</h2>
         </div>
-        <span className={styles.educationEntrySeparator} />
-        <div className={styles.educationDecoration} />
-        <div className={styles.educationEntryDescription}>
+        <span className={indexStyles.educationEntrySeparator} />
+        <div className={indexStyles.educationDecoration} />
+        <div className={indexStyles.educationEntryDescription}>
           <h2>Đại học Quốc&nbsp;gia Hà&nbsp;Nội</h2>
           <p>
             Trường Đại&nbsp;học Giáo&nbsp;dục
@@ -74,12 +76,12 @@ const IndexPageVI = () => (
           </p>
         </div>
 
-        <div className={styles.educationEntryYear}>
+        <div className={indexStyles.educationEntryYear}>
           <h2>2020</h2>
         </div>
-        <span className={styles.educationEntrySeparator} />
-        <div className={styles.educationDecoration} />
-        <div className={styles.educationEntryDescription}>
+        <span className={indexStyles.educationEntrySeparator} />
+        <div className={indexStyles.educationDecoration} />
+        <div className={indexStyles.educationEntryDescription}>
           <h2>Đại&nbsp;học Quốc&nbsp;gia Hà&nbsp;Nội</h2>
           <p>
             Trường Đại&nbsp;học Ngoại&nbsp;ngữ
@@ -91,45 +93,66 @@ const IndexPageVI = () => (
     </section>
 
     <section id={"experiences"}>
-      <div>
-        <h3>2017 - 2021</h3>
-        <h2>Gia sư bộ môn Hóa&nbsp;học</h2>
-        <StaticImage
-          src={"../images/adam-winger-UFG04g43hqs-unsplash.jpg"}
-          alt={""}
-        />
-        <p>Hỗ trợ nhóm học sinh lấy gốc môn Hóa, ôn luyện thi Đại&nbsp;học.</p>
-      </div>
+      <div className={indexStyles.experiencesWrapper}>
+        <ExperienceCard rotation={-3}>
+          <h3>2017 - 2021</h3>
+          <h2>Gia sư bộ môn Hóa&nbsp;học</h2>
+          <StaticImage
+            className={experienceCardStyles.photo}
+            src={"../images/adam-winger-UFG04g43hqs-unsplash.jpg"}
+            alt={""}
+          />
+          <p>
+            Hỗ trợ nhóm học sinh lấy gốc môn Hóa, ôn luyện thi Đại&nbsp;học.
+          </p>
+        </ExperienceCard>
 
-      <div>
-        <h3>2019</h3>
-        <h2>Cuộc thi Hunarobo lần 7</h2>
-        <StaticImage src={"../images/Hunarobo.JPG"} alt={""} />
-        <p>Hỗ trợ thí sinh và ban tổ chức trong quá trình cuộc thi.</p>
-      </div>
+        <ExperienceCard rotation={1}>
+          <h3>2019</h3>
+          <h2>Cuộc thi Hunarobo lần 7</h2>
+          <StaticImage
+            className={experienceCardStyles.photo}
+            src={"../images/Hunarobo.JPG"}
+            alt={""}
+          />
+          <p>Hỗ trợ thí sinh và ban tổ chức trong quá trình cuộc thi.</p>
+        </ExperienceCard>
 
-      <div>
-        <h3>2019 - 2020</h3>
-        <h2>Công ty Cổ&nbsp;phần Anh ngữ Apax</h2>
-        <StaticImage src={"../images/Apax.jpg"} alt={""} />
-        <p>
-          Trợ giảng tiếng Anh, hỗ trợ giáo viên bản ngữ giảng dạy, phiên dịch
-          các cuộc họp giữa giáo viên và phụ huynh.
-        </p>
-      </div>
+        <ExperienceCard rotation={-1}>
+          <h3>2019 - 2020</h3>
+          <h2>Công ty Cổ&nbsp;phần Anh ngữ Apax</h2>
+          <StaticImage
+            className={experienceCardStyles.photo}
+            src={"../images/Apax.jpg"}
+            alt={""}
+          />
+          <p>
+            Trợ giảng tiếng Anh, hỗ trợ giáo viên bản ngữ giảng dạy, phiên dịch
+            các cuộc họp giữa giáo viên và phụ huynh.
+          </p>
+        </ExperienceCard>
 
-      <div>
-        <h3>2020</h3>
-        <h2>Trường THPT Khoa&nbsp;học Giáo&nbsp;dục HES - VNU</h2>
-        <StaticImage src={"../images/HES.JPG"} alt={""} />
-        <p>Thực hiện công tác kiến tập sư phạm.</p>
-      </div>
+        <ExperienceCard rotation={-2}>
+          <h3>2020</h3>
+          <h2>Trường THPT Khoa&nbsp;học Giáo&nbsp;dục HES - VNU</h2>
+          <StaticImage
+            className={experienceCardStyles.photo}
+            src={"../images/HES.JPG"}
+            alt={""}
+          />
+          <p>Thực hiện công tác kiến tập sư phạm.</p>
+        </ExperienceCard>
 
-      <div>
-        <h3>2021</h3>
-        <h2>Trường THPT Trần&nbsp;Phú - Hoàn&nbsp;Kiếm</h2>
-        <StaticImage src={"../images/TP-HK.JPG"} alt={""} />
-        <p>Thực hiện công tác thực tập sư phạm.</p>
+        <ExperienceCard rotation={2}>
+          <h3>2021</h3>
+          <h2>Trường THPT Trần&nbsp;Phú - Hoàn&nbsp;Kiếm</h2>
+          <StaticImage
+            className={experienceCardStyles.photo}
+            src={"../images/TP-HK.JPG"}
+            alt={""}
+          />
+          <p>Thực hiện công tác thực tập sư phạm.</p>
+        </ExperienceCard>
       </div>
     </section>
 

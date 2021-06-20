@@ -220,4 +220,30 @@
   }
 }
 
+
 /****************************************************/
+/* EXPERIENCES SECTION */
+
+.experiences-wrapper {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 200px 0;
+}
+
+/* Responsive */
+@media only screen and (--viewport-phone) {
+  .experiences-wrapper {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+  }
+}
