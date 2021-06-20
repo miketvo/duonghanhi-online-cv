@@ -32,6 +32,9 @@ if (mobileHamburgerMenuMain && mobileHamburgerMenuButton && stickyNavRef) {
     mobileHamburgerMenuMainChildren.forEach(function (child, index) {
       child.firstChild.addEventListener("click", function () {
         mobileHamburgerMenu.setAttribute("style", "");
+        mobileHamburgerMenuButton.classList.remove(
+          "mobile-hamburger-menu-button-active"
+        );
         menuOn = false;
       });
       if (index !== 0) {

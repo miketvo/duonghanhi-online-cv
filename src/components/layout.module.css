@@ -39,6 +39,7 @@ footer {
 @media only screen and (--viewport-phone) {
   body {
     background-image: url("../images/bg_phone.jpg");
+    background-size: cover;
     background-position: center;
   }
 }
