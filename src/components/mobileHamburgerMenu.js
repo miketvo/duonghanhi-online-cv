@@ -39,6 +39,7 @@ const MobileHamburgerMenu = ({ lang, navLinks }) => {
           <div />
           <div />
           <div />
+          <div />
         </button>
       </div>
       <div id={"mobile-hamburger-menu"} className={styles.menu}>

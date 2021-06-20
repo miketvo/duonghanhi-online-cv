@@ -13,21 +13,27 @@
  */
 
 const stickyNavRef = document.getElementById("sticky-nav");
-const mobileHamburgerMenu = document.getElementById(
+const mobileHamburgerMenu = document.getElementById("mobile-hamburger-menu");
+const mobileHamburgerMenuMain = document.getElementById(
   "mobile-hamburger-menu-main-menu"
 );
 const mobileHamburgerMenuButton = document.getElementById(
   "mobile-hamburger-menu-button"
 );
+let menuOn = false;
 
-if (mobileHamburgerMenu && stickyNavRef) {
+if (mobileHamburgerMenuMain && mobileHamburgerMenuButton && stickyNavRef) {
   let stickyNavStyles = getComputedStyle(stickyNavRef);
-  let mobileHamburgerMenuChildren = mobileHamburgerMenu.childNodes;
+  let mobileHamburgerMenuMainChildren = mobileHamburgerMenuMain.childNodes;
 
   window.addEventListener("scroll", function () {
     // Dynamically load y-offset from top for each section linked in the menu
     let sectionPositions = [];
-    mobileHamburgerMenuChildren.forEach(function (child, index) {
+    mobileHamburgerMenuMainChildren.forEach(function (child, index) {
+      child.firstChild.addEventListener("click", function () {
+        mobileHamburgerMenu.setAttribute("style", "");
+        menuOn = false;
+      });
       if (index !== 0) {
         sectionPositions.push(
           document.getElementById(
@@ -36,7 +42,6 @@ if (mobileHamburgerMenu && stickyNavRef) {
         );
       }
     });
-    console.log(sectionPositions);
 
     // Highlight the active section name
     let offsetY =
@@ -45,36 +50,56 @@ if (mobileHamburgerMenu && stickyNavRef) {
       parseInt(stickyNavStyles.marginBottom);
     for (
       let index = 1;
-      index < mobileHamburgerMenuChildren.length - 1;
+      index < mobileHamburgerMenuMainChildren.length - 1;
       index++
     ) {
       if (
         sectionPositions[index - 1] - offsetY - 1 <= window.scrollY &&
         window.scrollY + 1 < sectionPositions[index] - offsetY
       ) {
-        mobileHamburgerMenuChildren[index].firstChild.classList.add("active");
+        mobileHamburgerMenuMainChildren[index].firstChild.classList.add(
+          "active"
+        );
       } else {
-        mobileHamburgerMenuChildren[index].firstChild.classList.remove(
+        mobileHamburgerMenuMainChildren[index].firstChild.classList.remove(
           "active"
         );
       }
     }
     if (
-      sectionPositions[mobileHamburgerMenuChildren.length - 2] - offsetY <
+      sectionPositions[mobileHamburgerMenuMainChildren.length - 2] - offsetY <
       window.scrollY
     ) {
-      mobileHamburgerMenuChildren[
-        mobileHamburgerMenuChildren.length - 1
+      mobileHamburgerMenuMainChildren[
+        mobileHamburgerMenuMainChildren.length - 1
       ].firstChild.classList.add("active");
     } else {
-      mobileHamburgerMenuChildren[
-        mobileHamburgerMenuChildren.length - 1
+      mobileHamburgerMenuMainChildren[
+        mobileHamburgerMenuMainChildren.length - 1
       ].firstChild.classList.remove("active");
     }
     if (window.scrollY < window.innerHeight) {
-      mobileHamburgerMenuChildren[0].firstChild.classList.remove("show");
+      mobileHamburgerMenuMainChildren[0].firstChild.classList.remove("show");
     } else {
-      mobileHamburgerMenuChildren[0].firstChild.classList.add("show");
+      mobileHamburgerMenuMainChildren[0].firstChild.classList.add("show");
     }
   });
 }
+
+mobileHamburgerMenuButton.addEventListener("click", function () {
+  if (menuOn) {
+    mobileHamburgerMenu.setAttribute("style", "");
+    mobileHamburgerMenuButton.classList.remove(
+      "mobile-hamburger-menu-button-active"
+    );
+  } else {
+    mobileHamburgerMenu.setAttribute(
+      "style",
+      "display: block; animation: fadeInExpandY 0.5s;"
+    );
+    mobileHamburgerMenuButton.classList.add(
+      "mobile-hamburger-menu-button-active"
+    );
+  }
+  menuOn = !menuOn;
+});

@@ -65,3 +65,28 @@
   display: block;
   opacity: 1.0;
 }
+
+.mobile-hamburger-menu-button-active {
+  background: none !important;
+}
+
+.mobile-hamburger-menu-button-active div:first-child {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.mobile-hamburger-menu-button-active div:nth-child(2) {
+  background: var(--white) !important;
+  transform: rotate(45deg);
+}
+
+.mobile-hamburger-menu-button-active div:nth-child(3) {
+  background: var(--white) !important;
+  transform: rotate(-45deg);
+  opacity: 1.0;
+}
+
+.mobile-hamburger-menu-button-active div:last-child {
+  opacity: 0;
+  transform: scale(0);
+}

@@ -19,9 +19,11 @@
   bottom: 0;
   width: 100%;
   z-index: 99;
+  background: linear-gradient(0, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
 }
 
 .toggle-button-wrapper button {
+  position: relative;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -38,11 +40,24 @@
   -o-box-shadow: 0 -3px 6px 0 var(--shadow-black);
   box-shadow: 0 -3px 6px 0 var(--shadow-black);
   padding: 15px 20px;
+  transition: 0.15s;
 }
 
 .toggle-button-wrapper button div {
   height: 0.1rem;
   width: 100%;
+  background: var(--black);
+  border-radius: 10rem;
+  transition: 0.15s;
+}
+
+.toggle-button-wrapper button div:nth-child(3) {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: calc(25px - 0.05rem);
+  height: 0.1rem;
+  width: 35px;
   background: var(--black);
   border-radius: 10rem;
 }
@@ -52,6 +67,7 @@
 }
 
 .menu {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -60,6 +76,7 @@
   background: var(--deep-shadow-black);
   z-index: 98;
   padding: 40px;
+  transform-origin: bottom;
 }
 
 .menu div {
