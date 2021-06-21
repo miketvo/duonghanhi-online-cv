@@ -22,7 +22,12 @@ const mobileHamburgerMenuButton = document.getElementById(
 );
 let menuOn = false;
 
-if (mobileHamburgerMenuMain && mobileHamburgerMenuButton && stickyNavRef) {
+if (
+  mobileHamburgerMenu &&
+  mobileHamburgerMenuMain &&
+  mobileHamburgerMenuButton &&
+  stickyNavRef
+) {
   let stickyNavStyles = getComputedStyle(stickyNavRef);
   let mobileHamburgerMenuMainChildren = mobileHamburgerMenuMain.childNodes;
 
@@ -89,20 +94,22 @@ if (mobileHamburgerMenuMain && mobileHamburgerMenuButton && stickyNavRef) {
   });
 }
 
-mobileHamburgerMenuButton.addEventListener("click", function () {
-  if (menuOn) {
-    mobileHamburgerMenu.setAttribute("style", "");
-    mobileHamburgerMenuButton.classList.remove(
-      "mobile-hamburger-menu-button-active"
-    );
-  } else {
-    mobileHamburgerMenu.setAttribute(
-      "style",
-      "display: block; animation: fadeInExpandY 0.5s;"
-    );
-    mobileHamburgerMenuButton.classList.add(
-      "mobile-hamburger-menu-button-active"
-    );
-  }
-  menuOn = !menuOn;
-});
+if (mobileHamburgerMenuButton) {
+  mobileHamburgerMenuButton.addEventListener("click", function () {
+    if (menuOn) {
+      mobileHamburgerMenu.setAttribute("style", "");
+      mobileHamburgerMenuButton.classList.remove(
+        "mobile-hamburger-menu-button-active"
+      );
+    } else {
+      mobileHamburgerMenu.setAttribute(
+        "style",
+        "display: block; animation: fadeInExpandY 0.5s;"
+      );
+      mobileHamburgerMenuButton.classList.add(
+        "mobile-hamburger-menu-button-active"
+      );
+    }
+    menuOn = !menuOn;
+  });
+}

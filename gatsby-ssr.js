@@ -18,4 +18,27 @@
  * See: https://www.gatsbyjs.com/docs/ssr-apis/
  */
 
-// You can delete this file if you're not using it
+const React = require("react");
+
+exports.onRenderBody = ({
+  setPreBodyComponents,
+  setHeadComponents,
+  setPostBodyComponents,
+}) => {
+  setPreBodyComponents([
+    <div id={"preloader"} />,
+    <noscript>
+      <div id={"noscript-msg"}>
+        This application uses Javascript to provide you with the best experience
+        possible :) Please enable Javascript in your browser.
+      </div>
+    </noscript>,
+  ]);
+  setHeadComponents([
+    <link as="script" rel="preload" href="/js/preloader.js" />,
+    <noscript>
+      <link rel="stylesheet" href="/noscript.css" />
+    </noscript>,
+  ]);
+  setPostBodyComponents([<script src="/js/preloader.js" />]);
+};

@@ -64,7 +64,7 @@ const MobileHamburgerMenu = ({ lang, navLinks }) => {
               </button>
             </li>
             {navLinks.map(link => (
-              <li key={link.link}>
+              <li key={["mobile-", link.link].join("")}>
                 <button
                   name={link.link}
                   onClick={event => {
