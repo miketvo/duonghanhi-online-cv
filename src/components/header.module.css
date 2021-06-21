@@ -60,6 +60,13 @@
   transform: rotateY(15deg);
 }
 
+@media only screen and (--viewport-narrow) {
+  .header {
+    height: 100vh;
+    padding-bottom: 0;
+  }
+}
+
 @media only screen and (--viewport-phone) {
   .titleWrapper {
     margin: 15vh 0 35vh 0;

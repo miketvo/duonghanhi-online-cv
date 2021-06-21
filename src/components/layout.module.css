@@ -23,6 +23,7 @@ body {
   background-position: 0 0;
   background-attachment: fixed;
   font-family: var(--primary-font) !important;
+  scroll-snap-type: y mandatory !important;
 }
 
 a {
@@ -83,6 +84,16 @@ footer a {
 footer a:hover,
 footer a:focus {
   text-decoration: underline;
+}
+
+@media only screen and (--viewport-narrow) {
+  html {
+    scroll-snap-type: none !important;
+  }
+
+  body {
+    scroll-snap-type: none !important;
+  }
 }
 
 @media only screen and (--viewport-phone) {
