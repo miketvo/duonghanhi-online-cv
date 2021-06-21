@@ -26,7 +26,9 @@ exports.onRenderBody = ({
   setPostBodyComponents,
 }) => {
   setPreBodyComponents([
-    <div id={"preloader"} />,
+    <div id={"preloader"}>
+      <div className={"preloader-loader"} />
+    </div>,
     <noscript>
       <div id={"noscript-msg"}>
         This application uses Javascript to provide you with the best experience

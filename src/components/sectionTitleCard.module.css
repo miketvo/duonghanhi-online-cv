@@ -45,6 +45,7 @@
 
 .panel:hover,
 .panel:focus {
+  cursor: pointer;
   transform: translateY(100px) rotate3d(1, 2, 1, -3deg);
 }
 

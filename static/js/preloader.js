@@ -12,22 +12,12 @@
  * STRICTLY PROHIBITED.
  */
 
-let preloaderOpacity = 1;
-console.log(preloaderOpacity);
-
 document.onreadystatechange = function () {
   if (document.readyState === "complete") {
     const preloader = document.getElementById("preloader");
-    console.log(preloader);
-    const fadeEffect = setInterval(function () {
-      if (preloaderOpacity > 0) {
-        preloaderOpacity -= 0.1;
-        console.log(preloaderOpacity);
-        preloader.setAttribute("style", `opacity: ${preloaderOpacity};`);
-      } else {
-        preloader.setAttribute("style", "display: none;");
-        clearInterval(fadeEffect);
-      }
+    preloader.classList.add("preloader-loaded");
+    setTimeout(function () {
+      preloader.setAttribute("style", "opacity: 0; display: none;");
     }, 100);
   }
 };

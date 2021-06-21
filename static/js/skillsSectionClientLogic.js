@@ -15,16 +15,15 @@
 const skillBars = document.querySelectorAll("#skills .skillbar");
 
 if (skillBars) {
-  // TODO: This code is buggy, fix it.
-  // for (let index = 0; index < skillBars.length; index++) {
-  //   window.addEventListener("scroll", function () {
-  //     if (
-  //       skillBars[index].offsetTop < window.scrollY &&
-  //       skillBars[index].getAttribute("style") !== ""
-  //     ) {
-  //       let newStyle = "display: inline; animation: expandX 0.8s;";
-  //       skillBars[index].setAttribute("style", newStyle);
-  //     }
-  //   });
-  // }
+  for (let index = 0; index < skillBars.length; index++) {
+    window.addEventListener("scroll", function () {
+      if (
+        skillBars[index].offsetTop < window.scrollY &&
+        skillBars[index].getAttribute("style") !== ""
+      ) {
+        let newStyle = "display: inline; animation: expandX 0.8s;";
+        skillBars[index].setAttribute("style", newStyle);
+      }
+    });
+  }
 }
