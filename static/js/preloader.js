@@ -12,21 +12,12 @@
  * STRICTLY PROHIBITED.
  */
 
-import * as React from "react";
-
-import Seo from "../components/seo";
-import * as styles from "./404.module.css";
-
-const NotFoundPage = () => (
-  <>
-    <Seo title="404: Not found" />
-    <div className={styles.wrapper}>
-      <h1>404: Not Found</h1>
-      <p>This page doesn&#39;t exist</p>
-      <p>Trang này không tồn tại</p>
-      <a href={"/"}>Back / Trở về</a>
-    </div>
-  </>
-);
-
-export default NotFoundPage;
+document.onreadystatechange = function () {
+  if (document.readyState === "complete") {
+    const preloader = document.getElementById("preloader");
+    preloader.classList.add("preloader-loaded");
+    setTimeout(function () {
+      preloader.setAttribute("style", "opacity: 0; display: none;");
+    }, 100);
+  }
+};

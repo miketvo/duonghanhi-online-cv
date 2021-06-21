@@ -12,6 +12,10 @@
  * STRICTLY PROHIBITED.
  */
 
+html {
+  scroll-snap-type: y mandatory !important;
+}
+
 body {
   background-color: var(--primary-green);
   background-image: url("../images/bg.jpg");
@@ -19,15 +23,21 @@ body {
   background-position: 0 0;
   background-attachment: fixed;
   font-family: var(--primary-font) !important;
-  overflow-x: hidden;
+  scroll-snap-type: y mandatory !important;
 }
 
 a {
   color: #d9a9ac;
 }
 
+header {
+  scroll-snap-align: start;
+}
+
 main {
   margin: 0 120px;
+  scroll-snap-align: start;
+  scroll-margin-bottom: 9999px;
 }
 
 section {
@@ -63,7 +73,7 @@ footer {
 }
 
 footer div {
-  opacity: 0.1;
+  opacity: 0.4;
 }
 
 footer a {
@@ -74,6 +84,16 @@ footer a {
 footer a:hover,
 footer a:focus {
   text-decoration: underline;
+}
+
+@media only screen and (--viewport-narrow) {
+  html {
+    scroll-snap-type: none !important;
+  }
+
+  body {
+    scroll-snap-type: none !important;
+  }
 }
 
 @media only screen and (--viewport-phone) {

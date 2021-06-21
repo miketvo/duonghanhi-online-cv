@@ -1,0 +1,80 @@
+/*
+ * Copyright (c) 2021 Mike Vo (info@miketvo.com) - All Rights Reserved.
+ *
+ * This file is part of the project "duonghanhi-online-cv".
+ *
+ * This project is an online curriculum vitae authored by Mike Vo - hereby
+ * referred to as "the author" - for Ms. Duong Ha Nhi - hereby referred to as
+ * "the client".
+ *
+ * COPYING AND/OR DISTRIBUTING OF ANY CONTENT WITHIN THIS PROJECT WITHOUT EX-
+ * PRESS PERMISSION FROM THE CLIENT AND/OR THE AUTHOR, VIA ANY MEDIUM IS
+ * STRICTLY PROHIBITED.
+ */
+
+#preloader {
+  opacity: 1.0;
+  background: var(--primary-green);
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+#preloader:hover {
+  cursor: progress;
+}
+
+.preloader-loader {
+  border: 12px solid var(--scrollbar-thumb-green);
+  border-top: 12px solid var(--secondary-pink);
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+.preloader-loaded {
+  animation: fadeOut 250ms;
+}
+
+.preloader-hidden {
+  display: none;
+  opacity: 0;
+  z-index: -9999;
+}
+
+@media only screen and (max-width: 767px) {
+  .preloader-loader {
+    border: 8px solid var(--scrollbar-thumb-green);
+    border-top: 8px solid var(--secondary-pink);
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1.0;
+  }
+  to {
+    opacity: 0;
+  }
+}

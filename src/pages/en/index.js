@@ -22,6 +22,7 @@ import ToTop from "../../components/toTop";
 import ExperienceCard from "../../components/experienceCard";
 import * as indexStyles from "../index.module.css";
 import * as experienceCardStyles from "../../components/experienceCard.module.css";
+import SectionTitleCard from "../../components/sectionTitleCard";
 
 const IndexPageEN = () => (
   <Layout lang={"en"}>
@@ -30,7 +31,8 @@ const IndexPageEN = () => (
     <ToTop />
 
     <section id={"bio"}>
-      <div className={indexStyles.bioWrapper}>
+      <SectionTitleCard scrollToId={"bio-content"} sectionTitle={"Bio"} />
+      <div id={"bio-content"} className={indexStyles.bioWrapper}>
         <div className={indexStyles.profilePhotoWrapper}>
           <StaticImage
             className={indexStyles.photo}
@@ -52,7 +54,11 @@ const IndexPageEN = () => (
     </section>
 
     <section id={"education"}>
-      <div className={indexStyles.educationWrapper}>
+      <SectionTitleCard
+        scrollToId={"education-content"}
+        sectionTitle={"Education"}
+      />
+      <div id={"education-content"} className={indexStyles.educationWrapper}>
         <div className={indexStyles.educationEntryYear}>
           <h2>2014</h2>
         </div>
@@ -93,7 +99,14 @@ const IndexPageEN = () => (
     </section>
 
     <section id={"experiences"}>
-      <div className={indexStyles.experiencesWrapper}>
+      <SectionTitleCard
+        scrollToId={"experiences-content"}
+        sectionTitle={"Experiences"}
+      />
+      <div
+        id={"experiences-content"}
+        className={indexStyles.experiencesWrapper}
+      >
         <ExperienceCard rotation={-3}>
           <h3>2017 - 2021</h3>
           <h2>Chemistry Tutor</h2>
@@ -159,7 +172,8 @@ const IndexPageEN = () => (
     </section>
 
     <section id={"skills"}>
-      <div className={indexStyles.skillsWrapper}>
+      <SectionTitleCard scrollToId={"skills-content"} sectionTitle={"Skills"} />
+      <div id={"skills-content"} className={indexStyles.skillsWrapper}>
         <div className={indexStyles.skill}>
           <h2>English</h2>
           <div className={indexStyles.skillsBarWrapper}>

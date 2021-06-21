@@ -12,18 +12,19 @@
  * STRICTLY PROHIBITED.
  */
 
+const skillsSection = document.getElementById("skills");
 const skillBars = document.querySelectorAll("#skills .skillbar");
 
 if (skillBars) {
-  window.addEventListener("scroll", function () {
-    for (let index = 0; index < skillBars.length; index++) {
+  for (let index = 0; index < skillBars.length; index++) {
+    window.addEventListener("scroll", function () {
       if (
-        skillBars[index].offsetTop + 3800 < window.scrollY &&
+        skillsSection.offsetTop + window.innerHeight / 2 < window.scrollY &&
         skillBars[index].getAttribute("style") !== ""
       ) {
         let newStyle = "display: inline; animation: expandX 0.8s;";
         skillBars[index].setAttribute("style", newStyle);
       }
-    }
-  });
+    });
+  }
 }

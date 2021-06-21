@@ -12,10 +12,24 @@
  * STRICTLY PROHIBITED.
  */
 
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/node-apis/
- */
+#preloader {
+  display: none;
+}
 
-// You can delete this file if you're not using it
+#noscript-msg {
+  font-family: var(--secondary-font) !important;
+  font-size: 1.5rem !important;
+  line-height: 1.5rem;
+  padding: 50px;
+  text-align: -webkit-center;
+  text-align: -moz-center;
+  text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+  #noscript-msg {
+    font-size: 1.2rem !important;
+    padding: 20px !important;
+  }
+
+}

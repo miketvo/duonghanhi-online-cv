@@ -145,6 +145,8 @@
 
 .education-entry-year {
   grid-column: 1;
+  text-align: -webkit-right;
+  text-align: -moz-right;
   text-align: right;
   display: -webkit-flex;
   display: -moz-flex;
@@ -152,7 +154,7 @@
   display: -o-flex;
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .education-entry-year h2,
