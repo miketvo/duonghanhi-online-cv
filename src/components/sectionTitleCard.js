@@ -14,13 +14,19 @@
 
 import * as React from "react";
 import PropTypes from "prop-types";
+import scrollTo from "gatsby-plugin-smoothscroll";
 
 import * as styles from "./sectionTitleCard.module.css";
 
-const SectionTitleCard = ({ sectionTitle, children }) => (
+const SectionTitleCard = ({ scrollToId, sectionTitle, children }) => (
   <>
     <div className={styles.wrapper}>
-      <div className={styles.panel}>
+      <div
+        className={styles.panel}
+        onClick={() => {
+          scrollTo("#" + scrollToId);
+        }}
+      >
         <h1>{sectionTitle}</h1>
         <div>{children}</div>
         <img className={styles.icon} src={"/arrow_down.svg"} alt={""} />
@@ -30,6 +36,7 @@ const SectionTitleCard = ({ sectionTitle, children }) => (
 );
 
 SectionTitleCard.propTypes = {
+  scrollToId: PropTypes.string,
   sectionTitle: PropTypes.string,
 };
 

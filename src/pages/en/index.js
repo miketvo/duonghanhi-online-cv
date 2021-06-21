@@ -31,8 +31,8 @@ const IndexPageEN = () => (
     <ToTop />
 
     <section id={"bio"}>
-      <SectionTitleCard sectionTitle={"Bio"} />
-      <div className={indexStyles.bioWrapper}>
+      <SectionTitleCard scrollToId={"bio-content"} sectionTitle={"Bio"} />
+      <div id={"bio-content"} className={indexStyles.bioWrapper}>
         <div className={indexStyles.profilePhotoWrapper}>
           <StaticImage
             className={indexStyles.photo}
@@ -54,8 +54,11 @@ const IndexPageEN = () => (
     </section>
 
     <section id={"education"}>
-      <SectionTitleCard sectionTitle={"Education"} />
-      <div className={indexStyles.educationWrapper}>
+      <SectionTitleCard
+        scrollToId={"education-content"}
+        sectionTitle={"Education"}
+      />
+      <div id={"education-content"} className={indexStyles.educationWrapper}>
         <div className={indexStyles.educationEntryYear}>
           <h2>2014</h2>
         </div>
@@ -96,8 +99,14 @@ const IndexPageEN = () => (
     </section>
 
     <section id={"experiences"}>
-      <SectionTitleCard sectionTitle={"Experiences"} />
-      <div className={indexStyles.experiencesWrapper}>
+      <SectionTitleCard
+        scrollToId={"experiences-content"}
+        sectionTitle={"Experiences"}
+      />
+      <div
+        id={"experiences-content"}
+        className={indexStyles.experiencesWrapper}
+      >
         <ExperienceCard rotation={-3}>
           <h3>2017 - 2021</h3>
           <h2>Chemistry Tutor</h2>
@@ -163,8 +172,8 @@ const IndexPageEN = () => (
     </section>
 
     <section id={"skills"}>
-      <SectionTitleCard sectionTitle={"Skills"} />
-      <div className={indexStyles.skillsWrapper}>
+      <SectionTitleCard scrollToId={"skills-content"} sectionTitle={"Skills"} />
+      <div id={"skills-content"} className={indexStyles.skillsWrapper}>
         <div className={indexStyles.skill}>
           <h2>English</h2>
           <div className={indexStyles.skillsBarWrapper}>

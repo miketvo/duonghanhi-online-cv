@@ -31,8 +31,8 @@ const IndexPageVI = () => (
     <ToTop />
 
     <section id={"bio"}>
-      <SectionTitleCard sectionTitle={"Tiểu sử"} />
-      <div className={indexStyles.bioWrapper}>
+      <SectionTitleCard scrollToId={"bio-content"} sectionTitle={"Tiểu sử"} />
+      <div id={"bio-content"} className={indexStyles.bioWrapper}>
         <div className={indexStyles.profilePhotoWrapper}>
           <StaticImage
             className={indexStyles.photo}
@@ -54,8 +54,11 @@ const IndexPageVI = () => (
     </section>
 
     <section id={"education"}>
-      <SectionTitleCard sectionTitle={"Học vấn"} />
-      <div className={indexStyles.educationWrapper}>
+      <SectionTitleCard
+        scrollToId={"education-content"}
+        sectionTitle={"Học vấn"}
+      />
+      <div id={"education-content"} className={indexStyles.educationWrapper}>
         <div className={indexStyles.educationEntryYear}>
           <h2>2014</h2>
         </div>
@@ -96,8 +99,14 @@ const IndexPageVI = () => (
     </section>
 
     <section id={"experiences"}>
-      <SectionTitleCard sectionTitle={"Kinh nghiệm"} />
-      <div className={indexStyles.experiencesWrapper}>
+      <SectionTitleCard
+        scrollToId={"experiences-content"}
+        sectionTitle={"Kinh nghiệm"}
+      />
+      <div
+        id={"experiences-content"}
+        className={indexStyles.experiencesWrapper}
+      >
         <ExperienceCard rotation={-3}>
           <h3>2017 - 2021</h3>
           <h2>Gia sư bộ môn Hóa&nbsp;học</h2>
@@ -161,8 +170,11 @@ const IndexPageVI = () => (
     </section>
 
     <section id={"skills"}>
-      <SectionTitleCard sectionTitle={"Kỹ năng"} />
-      <div className={indexStyles.skillsWrapper}>
+      <SectionTitleCard
+        scrollToId={"skills-content"}
+        sectionTitle={"Kỹ năng"}
+      />
+      <div id={"skills-content"} className={indexStyles.skillsWrapper}>
         <div className={indexStyles.skill}>
           <h2>Tiếng Anh</h2>
           <div className={indexStyles.skillsBarWrapper}>
