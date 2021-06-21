@@ -22,6 +22,7 @@ import ToTop from "../components/toTop";
 import ExperienceCard from "../components/experienceCard";
 import * as indexStyles from "./index.module.css";
 import * as experienceCardStyles from "../components/experienceCard.module.css";
+import SectionTitleCard from "../components/sectionTitleCard";
 
 const IndexPageVI = () => (
   <Layout lang={"vi"}>
@@ -30,6 +31,7 @@ const IndexPageVI = () => (
     <ToTop />
 
     <section id={"bio"}>
+      <SectionTitleCard sectionTitle={"Tiểu sử"} />
       <div className={indexStyles.bioWrapper}>
         <div className={indexStyles.profilePhotoWrapper}>
           <StaticImage
@@ -52,6 +54,7 @@ const IndexPageVI = () => (
     </section>
 
     <section id={"education"}>
+      <SectionTitleCard sectionTitle={"Học vấn"} />
       <div className={indexStyles.educationWrapper}>
         <div className={indexStyles.educationEntryYear}>
           <h2>2014</h2>
@@ -93,6 +96,7 @@ const IndexPageVI = () => (
     </section>
 
     <section id={"experiences"}>
+      <SectionTitleCard sectionTitle={"Kinh nghiệm"} />
       <div className={indexStyles.experiencesWrapper}>
         <ExperienceCard rotation={-3}>
           <h3>2017 - 2021</h3>
@@ -157,6 +161,7 @@ const IndexPageVI = () => (
     </section>
 
     <section id={"skills"}>
+      <SectionTitleCard sectionTitle={"Kỹ năng"} />
       <div className={indexStyles.skillsWrapper}>
         <div className={indexStyles.skill}>
           <h2>Tiếng Anh</h2>

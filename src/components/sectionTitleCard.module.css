@@ -1,0 +1,99 @@
+/*
+ * Copyright (c) 2021 Mike Vo (info@miketvo.com) - All Rights Reserved.
+ *
+ * This file is part of the project "duonghanhi-online-cv".
+ *
+ * This project is an online curriculum vitae authored by Mike Vo - hereby
+ * referred to as "the author" - for Ms. Duong Ha Nhi - hereby referred to as
+ * "the client".
+ *
+ * COPYING AND/OR DISTRIBUTING OF ANY CONTENT WITHIN THIS PROJECT WITHOUT EX-
+ * PRESS PERMISSION FROM THE CLIENT AND/OR THE AUTHOR, VIA ANY MEDIUM IS
+ * STRICTLY PROHIBITED.
+ */
+
+.wrapper {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  margin: 0 10%;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.panel {
+  background: var(--primary-green);
+  -webkit-box-shadow: 0 3x 6px 0 var(--shadow-black);
+  -o-box-shadow: 0 3px 6px 0 var(--shadow-black);
+  box-shadow: 0 3px 6px 0 var(--shadow-black);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: -webkit-center;
+  text-align: -moz-center;
+  text-align: center;
+  transform: translateY(100px);
+  min-width: 400px;
+  transition: transform 0.5s;
+}
+
+.panel:hover,
+.panel:focus {
+  transform: translateY(100px) rotate3d(1, 2, 1, -3deg);
+}
+
+.panel h1 {
+  font-family: var(--header-font);
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: var(--secondary-pink);
+  transition: 0.5s;
+}
+
+.panel:hover h1,
+.panel:focus h1 {
+  transform: rotateY(15deg);
+}
+
+.panel .icon {
+  margin: 20px 0 0 0;
+  width: 18px;
+  transition: 0.3s;
+}
+
+.panel:hover .icon,
+.panel:focus .icon {
+  transform: scale(1.2);
+}
+
+@media only screen and (--viewport-phone) {
+  .wrapper {
+    margin: 0;
+  }
+
+  .panel {
+    border-radius: 10px;
+    padding: 25px;
+    transform: initial;
+    min-width: 200px;
+  }
+
+  .panel:hover,
+  .panel:focus {
+    transform: rotate3d(1, 2, 1, -3deg);
+  }
+
+  .panel h1 {
+    font-size: 1.6rem;
+  }
+
+  .panel .icon {
+    width: 9px;
+  }
+}
