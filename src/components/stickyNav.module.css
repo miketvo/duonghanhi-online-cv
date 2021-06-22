@@ -62,8 +62,7 @@
   transform: scaleX(0);
 }
 
-.sticky-nav li button:hover:after,
-.sticky-nav li button:focus:after {
+.sticky-nav li button:hover:after {
   opacity: inherit;
   transform: scaleX(1);
 }

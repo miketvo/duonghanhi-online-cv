@@ -102,7 +102,7 @@
 @media only screen and (--viewport-phone) {
   .profile-photo-wrapper {
     padding: 30px;
-    flex: 1 0;
+    flex: 1 0 240px;
   }
 
   .bio-content-wrapper h2 {

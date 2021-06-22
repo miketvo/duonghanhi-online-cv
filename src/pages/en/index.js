@@ -112,7 +112,7 @@ const IndexPageEN = () => (
           <h2>Chemistry Tutor</h2>
           <StaticImage
             className={experienceCardStyles.photo}
-            src={"../../images/adam-winger-UFG04g43hqs-unsplash.jpg"}
+            src={"../../images/b8e74c285805ac5bf514.jpg"}
             alt={""}
           />
           <p>
