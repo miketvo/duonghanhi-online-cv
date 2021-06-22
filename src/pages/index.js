@@ -78,7 +78,7 @@ const IndexPageVI = () => (
           <p>
             Trường Đại&nbsp;học Giáo&nbsp;dục
             <br />
-            Khoa Sư&nbsp;phạm Hóa&nbsp;học
+            Ngành Sư&nbsp;phạm Hóa&nbsp;học - Khoa Sư&nbsp;phạm
           </p>
         </div>
 
@@ -112,7 +112,7 @@ const IndexPageVI = () => (
           <h2>Gia sư bộ môn Hóa&nbsp;học</h2>
           <StaticImage
             className={experienceCardStyles.photo}
-            src={"../images/adam-winger-UFG04g43hqs-unsplash.jpg"}
+            src={"../images/b8e74c285805ac5bf514.jpg"}
             alt={""}
           />
           <p>
